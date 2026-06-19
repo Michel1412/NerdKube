@@ -4,6 +4,12 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    inputs:
+      mod_version:
+        description: 'Versão do mod (ex.: 0.6.0)'
+        required: true
+        default: '0.6.0'
 
 permissions:
   contents: read
@@ -25,9 +31,14 @@ jobs:
       - name: Fetch compile-only libs
         run: bash scripts/ci-setup-libs.sh
 
-      - name: Resolve version from tag
+      - name: Resolve version
         id: version
-        run: echo "mod_version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mod_version=${{ inputs.mod_version }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "mod_version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Build
         run: chmod +x gradlew && ./gradlew build -Pmod_version=${{ steps.version.outputs.mod_version }}
