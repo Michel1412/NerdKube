@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:eternal_cube",
+  "type": "block",
+  "display_name": "Cubo Eterno",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/block/eternal_cube_face.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/block/eternal_cube.json",
+  "active_option": "a",
+  "face_layout": "single"
+}

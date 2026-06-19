@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:nerd_cube",
+  "type": "block",
+  "display_name": "NerdCube",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/block/nerd_cube.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/block/nerd_cube.json",
+  "active_option": "a",
+  "face_layout": "single"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:singularidade_hipercarregada",
+  "type": "item",
+  "display_name": "Singularidade Hipercarregada",
+  "module": "tech",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/singularidade_hipercarregada.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/singularidade_hipercarregada.json",
+  "active_option": "a"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:chassi_cyber_flux",
+  "type": "item",
+  "display_name": "Chassi Cyber-Flux",
+  "module": "tech",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/chassi_cyber_flux.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/chassi_cyber_flux.json",
+  "active_option": "a"
+}

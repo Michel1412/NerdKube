@@ -1,0 +1,15 @@
+{
+  "id": "nerdkube:pedestal_magia",
+  "type": "block",
+  "display_name": "Pedestal de Magia",
+  "pedestal_direction": "south",
+  "amulet_item": "nerdkube:coracao_arcano",
+  "resolution": 16,
+  "output_png": {
+    "side": "src/main/resources/assets/nerdkube/textures/block/pedestal_magia_side.png",
+    "top": "src/main/resources/assets/nerdkube/textures/block/pedestal_magia_top.png"
+  },
+  "model_json": "src/main/resources/assets/nerdkube/models/block/pedestal_magia.json",
+  "active_option": "b",
+  "face_layout": "side_top"
+}

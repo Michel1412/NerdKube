@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:fragmento_combate_stage1",
+  "type": "item",
+  "display_name": "Amuleto de Sangue Petrificado",
+  "module": "exploration",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/fragmento_combate_stage1.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/fragmento_combate_stage1.json",
+  "active_option": "a"
+}

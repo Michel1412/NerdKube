@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": { "item": "mcwfurnitures:oak_wardrobe" },
+    "F": { "item": "refurbished_furniture:light_fridge" },
+    "B": { "item": "mcwfurnitures:oak_bookshelf" },
+    "P": { "item": "mcwfences:oak_picket_fence" },
+    "S": { "item": "minecraft:stone_stairs" },
+    "T": { "item": "mcwpaths:stone_flagstone_path" }
+  },
+  "pattern": [
+    "WFB",
+    "PSP",
+    "TTT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nerdkube:altar_revestimento_agri"
+  }
+}

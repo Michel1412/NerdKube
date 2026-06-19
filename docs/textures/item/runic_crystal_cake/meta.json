@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:runic_crystal_cake",
+  "type": "item",
+  "display_name": "Bolo Rúnico de Cristal",
+  "module": "agriculture",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/runic_crystal_cake.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/runic_crystal_cake.json",
+  "active_option": "a"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "bakery:jar" },
+    { "item": "nerdkube:raizes_doces_fritas" },
+    { "item": "nerdkube:raizes_doces_fritas" },
+    { "item": "nerdkube:raizes_doces_fritas" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "nerdkube:raizes_ancestrais_em_conserva"
+  }
+}

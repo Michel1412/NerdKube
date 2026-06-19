@@ -1,0 +1,12 @@
+{
+  "type": "justdirethings:goospread",
+  "craftingDuration": 4800,
+  "id": "nerdkube:ma_frame_to_sculk_gear_crystal",
+  "input": {
+    "Name": "mysticalagriculture:machine_frame"
+  },
+  "output": {
+    "Name": "nerdkube:sculk_gear_crystal"
+  },
+  "tierRequirement": 4
+}

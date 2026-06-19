@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": { "item": "chipped:carpenters_table" },
+  "base": { "item": "nerdkube:pedestal_bruto" },
+  "template": { "item": "chipped:carpenters_table" },
+  "result": {
+    "count": 1,
+    "id": "nerdkube:pedestal_agricultura"
+  }
+}

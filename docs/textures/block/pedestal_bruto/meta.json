@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:pedestal_bruto",
+  "type": "block",
+  "display_name": "Pilar Arquitetônico Inacabado",
+  "module": "agriculture",
+  "face_layout": "cube_all",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/block/pedestal_bruto.png",
+  "active_option": "a"
+}

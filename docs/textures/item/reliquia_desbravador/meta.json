@@ -1,0 +1,11 @@
+{
+  "id": "nerdkube:reliquia_desbravador",
+  "type": "item",
+  "display_name": "Relíquia do Desbravador",
+  "module": "exploration",
+  "pedestal": "east",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/reliquia_desbravador.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/reliquia_desbravador.json",
+  "active_option": "b"
+}

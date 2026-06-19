@@ -1,0 +1,38 @@
+---
+description: Convenções NeoForge para o mod NerdKube
+globs: "**/*.{java,gradle,kts,toml,json}"
+alwaysApply: false
+---
+
+# NeoForge 1.21.1 — NerdKube
+
+## Target
+
+- Minecraft **1.21.1**
+- NeoForge **21.1.233** (mesmo do pack Nerds Quadrados)
+
+## Dependências
+
+- Declarar mods do pack como `optional` quando a feature for enhancement
+- Hard-dep apenas em NeoForge + APIs estáveis necessárias
+- Mod IDs do pack: ver `docs/modpack/manifest.json`
+
+## Endgame
+
+- Coordenar com `endrem` e FTB Quests — ver `docs/modpack/endgame-baseline.md`
+- Loot/recipes: preferir datapacks do mod ou registrars NeoForge; pack não usa KubeJS
+- Considerar multiplayer (Lootr per-player loot, Corpse, PlayerRevive)
+
+## i18n
+
+- `pt_br.json` obrigatório para strings visíveis ao jogador
+- `en_us.json` recomendado
+
+## Build
+
+```powershell
+.\gradlew build
+.\gradlew runClient
+```
+
+JAR do End Remastered: `libs/` ou `modpack_mods_dir` em `gradle.properties`.

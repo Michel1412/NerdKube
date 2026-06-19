@@ -1,0 +1,15 @@
+{
+  "id": "nerdkube:pedestal_agricultura",
+  "type": "block",
+  "display_name": "Pedestal de Agricultura",
+  "pedestal_direction": "west",
+  "amulet_item": "nerdkube:semente_criacao",
+  "resolution": 16,
+  "output_png": {
+    "side": "src/main/resources/assets/nerdkube/textures/block/pedestal_agricultura_side.png",
+    "top": "src/main/resources/assets/nerdkube/textures/block/pedestal_agricultura_top.png"
+  },
+  "model_json": "src/main/resources/assets/nerdkube/models/block/pedestal_agricultura.json",
+  "active_option": "a",
+  "face_layout": "side_top"
+}

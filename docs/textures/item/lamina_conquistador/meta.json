@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:lamina_conquistador",
+  "type": "item",
+  "display_name": "Punho da Lâmina Sacrificada",
+  "module": "exploration",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/lamina_conquistador.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/lamina_conquistador.json",
+  "active_option": "a"
+}

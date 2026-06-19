@@ -1,0 +1,29 @@
+{
+  "type": "occultism:ritual",
+  "activation_item": {
+    "item": "occultism:book_of_binding_bound_afrit"
+  },
+  "duration": 300,
+  "ingredients": [
+    { "item": "occultism:sacrificial_bowl" },
+    { "item": "malum:block_of_soul_stained_steel" },
+    { "item": "malum:block_of_soul_stained_steel" },
+    { "item": "evilcraft:dark_power_gem_block" },
+    { "item": "evilcraft:dark_power_gem_block" },
+    { "item": "ars_nouveau:sourcestone" },
+    { "item": "ars_nouveau:sourcestone" },
+    { "item": "ars_nouveau:sourcestone" },
+    { "item": "ars_nouveau:sourcestone" },
+    { "item": "irons_spellbooks:arcane_salvage" }
+  ],
+  "pentacle_id": "occultism:craft_afrit",
+  "result": {
+    "count": 1,
+    "id": "nerdkube:pedestal_magia"
+  },
+  "ritual_dummy": {
+    "count": 1,
+    "id": "occultism:ritual_dummy/craft_pedestal_magia"
+  },
+  "ritual_type": "occultism:craft"
+}

@@ -1,0 +1,41 @@
+---
+description: Alinhamento do mod com o modpack fechado Nerds Quadrados
+alwaysApply: true
+---
+
+# Alinhamento com modpack
+
+O modpack **não é versionado neste repo**. O snapshot em `docs/modpack/` espelha a instância CurseForge.
+
+## Antes de integrar com outro mod
+
+1. Confirmar JAR em `docs/modpack/mods-list.txt` ou `manifest.json`
+2. Conferir config em `G:\CurseForge\minecraft\Instances\Nerds Quadrados\config\`
+3. Usar o **mod ID** correto (ex.: `endrem`, não `endremastered`)
+
+## Versões fixas
+
+| Componente | Versão |
+|------------|--------|
+| Minecraft | 1.21.1 |
+| NeoForge | 21.1.233 |
+| End Remastered | 6.0.2 (`endrem-neoforge-1.21.X-6.0.2.jar`) |
+
+## Integrações endgame prioritárias
+
+- `endrem` — portal e olhos (não quebrar gate das quests)
+- `ftbquests` — progressão linear; capítulo `os_olhos_do_fim`
+- YUNG's Better End Island — não sobrescrever torre/gateways sem motivo
+- `simplyswords` — loot tables do dragão já customizadas
+
+## Conteúdo fantasma
+
+Quests/configs sem JAR: Twilight Forest, Born In Chaos, Lightman's Currency. Tratar como opcional ou futuro.
+
+## Refresh
+
+```powershell
+.\docs\modpack\refresh-snapshot.ps1
+```
+
+Revisar `manifest.json` e `endgame-baseline.md` após mudanças relevantes no pack.

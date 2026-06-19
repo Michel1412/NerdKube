@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:mecanismo_sombra_corrompido",
+  "type": "item",
+  "display_name": "Mecanismo Corrompido por Sombra",
+  "module": "tech",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/mecanismo_sombra_corrompido.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/mecanismo_sombra_corrompido.json",
+  "active_option": "a"
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "nerdkube:fragmento_agri_stage1" },
+    { "item": "nerdkube:fragmento_agri_stage1" },
+    { "item": "nerdkube:fragmento_agri_stage1" },
+    { "item": "productivebees:configurable_honeycomb" },
+    { "item": "productivebees:honey_bucket" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "nerdkube:pacote_essencias_agri"
+  }
+}

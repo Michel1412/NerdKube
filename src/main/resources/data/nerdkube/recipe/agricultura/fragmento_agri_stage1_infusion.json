@@ -1,0 +1,18 @@
+{
+  "type": "mysticalagriculture:infusion",
+  "input": { "item": "mysticalagradditions:insanium_block" },
+  "ingredients": [
+    { "item": "mysticalagriculture:awakened_supremium_essence" },
+    { "item": "mysticalagriculture:awakened_supremium_essence" },
+    { "item": "mysticalagriculture:nether_star_essence" },
+    { "item": "mysticalagriculture:nether_star_essence" },
+    { "item": "mysticalagriculture:dragon_egg_essence" },
+    { "item": "mysticalagriculture:dragon_egg_essence" },
+    { "item": "mysticalagriculture:netherite_essence" },
+    { "item": "mysticalagriculture:netherite_essence" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "nerdkube:fragmento_agri_stage1"
+  }
+}

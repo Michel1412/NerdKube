@@ -1,0 +1,117 @@
+# This is an example neoforge.mods.toml file. It contains the data relating to the loading mods.
+# There are several mandatory fields (#mandatory), and many more that are optional (#optional).
+# The overall format is standard TOML format, v0.5.0.
+# Note that there are a couple of TOML lists in this file.
+# Find more information on toml format here:  https://github.com/toml-lang/toml
+
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+description='''
+Customização de endgame para o modpack Nerds Quadrados.
+'''
+
+[[dependencies.${mod_id}]]
+modId="neoforge"
+type="required"
+versionRange="[${neo_version},)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="minecraft"
+type="required"
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"
+
+# End Remastered — gate do End no modpack Nerds Quadrados (16 olhos)
+[[dependencies.${mod_id}]]
+modId="endrem"
+type="optional"
+versionRange="[6.0.2,)"
+ordering="AFTER"
+side="BOTH"
+reason="Integração com o sistema de olhos e portal do End Remastered"
+
+[[dependencies.${mod_id}]]
+modId="jade"
+type="optional"
+versionRange="[15.0.0,)"
+ordering="NONE"
+side="BOTH"
+reason="Status do ritual nos pedestais (posição e oferta)"
+
+[[dependencies.${mod_id}]]
+modId="jei"
+type="optional"
+versionRange="[19.0.0,)"
+ordering="NONE"
+side="CLIENT"
+reason="Receitas, usos e categorias de ritual dos itens NerdKube"
+
+# Overrides de receita — carregar depois dos mods alvo
+[[dependencies.${mod_id}]]
+modId="mekanism"
+type="optional"
+versionRange="[10.0.0,)"
+ordering="AFTER"
+side="BOTH"
+reason="Override da receita do Atomic Disassembler"
+
+[[dependencies.${mod_id}]]
+modId="mekanismgenerators"
+type="optional"
+versionRange="[10.0.0,)"
+ordering="AFTER"
+side="BOTH"
+reason="Override da receita do Wind Generator"
+
+[[dependencies.${mod_id}]]
+modId="powah"
+type="optional"
+versionRange="[6.0.0,)"
+ordering="AFTER"
+side="BOTH"
+reason="Wind Generator usa powah:battery_nitro"
+
+[[dependencies.${mod_id}]]
+modId="evilcraft"
+type="optional"
+versionRange="[1.2.0,)"
+ordering="AFTER"
+side="BOTH"
+reason="Override da Vengeance Pickaxe"
+
+[[dependencies.${mod_id}]]
+modId="malum"
+type="optional"
+versionRange="[1.0.0,)"
+ordering="NONE"
+side="BOTH"
+reason="Vengeance Pickaxe usa malum:hallowed_gold_ingot"
+
+# Oritech Enderic Laser — ownership do colocador (FakePlayer, compatível com FTB Chunks e outros mods de claim)
+[[dependencies.${mod_id}]]
+modId="oritech"
+type="optional"
+versionRange="[1.2.0,)"
+ordering="AFTER"
+side="BOTH"
+reason="Mixin no Laser Arm: quebras associadas ao UUID do jogador que colocou a máquina"
+
+[[dependencies.${mod_id}]]
+modId="alexsmobs"
+type="optional"
+versionRange="[1.22.0,)"
+ordering="AFTER"
+side="BOTH"
+reason="Mesa de Transmutação — gacha da Poeira de Transmutação Proibida e loot raro"
+
+[[mixins]]
+config="nerdkube.mixins.json"

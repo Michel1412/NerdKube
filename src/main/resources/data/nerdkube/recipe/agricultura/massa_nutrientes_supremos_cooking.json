@@ -1,0 +1,16 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 2.0,
+  "ingredients": [
+    { "item": "farmersdelight:roast_chicken_block" },
+    { "item": "farmersdelight:shepherds_pie_block" },
+    { "item": "bakery:chocolate_cake" },
+    { "item": "farm_and_charm:butter" }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "nerdkube:massa_nutrientes_supremos"
+  }
+}

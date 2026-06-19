@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:massa_runica_crua",
+  "type": "item",
+  "display_name": "Massa Rúnica Crua",
+  "module": "agriculture",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/massa_runica_crua.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/massa_runica_crua.json",
+  "active_option": "a"
+}

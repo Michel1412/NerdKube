@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "nerdkube:item/fragmento_combate_stage1"
+  }
+}

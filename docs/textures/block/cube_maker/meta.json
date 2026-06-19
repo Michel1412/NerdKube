@@ -1,0 +1,13 @@
+{
+  "id": "nerdkube:cube_maker",
+  "type": "block",
+  "display_name": "Fabricador de Cubo",
+  "resolution": 16,
+  "output_png": {
+    "textura_geral": "src/main/resources/assets/nerdkube/textures/block/textura_geral.png",
+    "pilares_laterais": "src/main/resources/assets/nerdkube/textures/block/pilares_laterais.png",
+    "cubo_dos_craft": "src/main/resources/assets/nerdkube/textures/block/cubo_dos_craft.png"
+  },
+  "model_json": "src/main/resources/assets/nerdkube/models/block/cube_maker.json",
+  "blockbench_source": "docs/blockbench/Cubo_Nerd_Cube_Maker.json"
+}

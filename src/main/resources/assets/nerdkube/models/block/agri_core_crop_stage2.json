@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "nerdkube:block/agri_core_crop_stage2"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "nerdkube:block/cube_maker" }
+  }
+}

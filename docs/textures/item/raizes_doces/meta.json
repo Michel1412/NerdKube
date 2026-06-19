@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:raizes_doces",
+  "type": "item",
+  "display_name": "Raízes Doces",
+  "module": "agriculture",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/raizes_doces.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/raizes_doces.json",
+  "active_option": "a"
+}

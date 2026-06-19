@@ -1,0 +1,41 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "Custom"
+
+[[mods]]
+modId = "bakery"
+version = "2.1.6"
+displayName = "[Let's Do] Bakery"
+authors = "Satisfy"
+credits = "MissLilitu, CR-055"
+description = '''
+Build your own bakery, bake the finest pastries, delicious bread, and sweet cakes!'''
+logoFile = "pack.png"
+
+[[dependencies.bakery]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.bakery]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.bakery]]
+modId = "architectury"
+mandatory = true
+versionRange = "[9.0.8,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.bakery]]
+modId = "farm_and_charm"
+mandatory = true
+versionRange = "[0.0.1,)"
+ordering = "AFTER"
+side = "BOTH"

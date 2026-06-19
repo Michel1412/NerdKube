@@ -1,0 +1,1020 @@
+﻿{
+    "curseforgeAddonCount":  202,
+    "addons":  [
+                   {
+                       "name":  "Trash Cans",
+                       "fileNameOnDisk":  "trashcans-1.0.18c-neoforge-mc1.21.jar",
+                       "dateInstalled":  "2026-06-17T03:48:17.6825978Z"
+                   },
+                   {
+                       "name":  "Kotlin for Forge",
+                       "fileNameOnDisk":  "kotlinforforge-5.11.0-all.jar",
+                       "dateInstalled":  "2026-06-17T03:48:29.4299286Z"
+                   },
+                   {
+                       "name":  "Terralith",
+                       "fileNameOnDisk":  "Terralith_1.21.x_v2.6.2.jar",
+                       "dateInstalled":  "2026-06-17T03:48:28.8832579Z"
+                   },
+                   {
+                       "name":  "Camera Mod",
+                       "fileNameOnDisk":  "camera-neoforge-1.21.1-1.0.21.jar",
+                       "dateInstalled":  "2026-06-17T03:48:16.8926332Z"
+                   },
+                   {
+                       "name":  "Mystical Agradditions",
+                       "fileNameOnDisk":  "MysticalAgradditions-1.21.1-8.0.13.jar",
+                       "dateInstalled":  "2026-06-17T03:48:58.6207858Z"
+                   },
+                   {
+                       "name":  "PlayerRevive",
+                       "fileNameOnDisk":  "PlayerRevive_NEOFORGE_v2.1.2_mc1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:19.46151Z"
+                   },
+                   {
+                       "name":  "FTB Quests (NeoForge)",
+                       "fileNameOnDisk":  "ftb-quests-neoforge-2101.1.27.jar",
+                       "dateInstalled":  "2026-06-17T03:48:41.3326094Z"
+                   },
+                   {
+                       "name":  "Macaw\u0027s Doors",
+                       "fileNameOnDisk":  "mcw-doors-1.1.5-mc1.21.1neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:41.5116455Z"
+                   },
+                   {
+                       "name":  "Curios API (Forge/NeoForge)",
+                       "fileNameOnDisk":  "curios-neoforge-9.5.1+1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:04.4834254Z"
+                   },
+                   {
+                       "name":  "Citadel (Unofficial Port)",
+                       "fileNameOnDisk":  "citadel-1.21.1-2.7.6.jar",
+                       "dateInstalled":  "2026-06-17T03:48:45.300587Z"
+                   },
+                   {
+                       "name":  "OpenBlocks Elevator",
+                       "fileNameOnDisk":  "elevatorid-neoforge-1.21.1-1.11.4.jar",
+                       "dateInstalled":  "2026-06-17T03:48:54.1918881Z"
+                   },
+                   {
+                       "name":  "Ars Nouveau",
+                       "fileNameOnDisk":  "ars_nouveau-1.21.1-5.11.7.jar",
+                       "dateInstalled":  "2026-06-17T03:48:48.4134645Z"
+                   },
+                   {
+                       "name":  "Emotecraft (Forge)",
+                       "fileNameOnDisk":  "emotecraft-for-MC1.21.1-2.4.12-neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:48.9907704Z"
+                   },
+                   {
+                       "name":  "Simplest Paxels",
+                       "fileNameOnDisk":  "simplest_paxels-1.21.1-1.0.6.jar",
+                       "dateInstalled":  "2026-06-17T03:48:22.257024Z"
+                   },
+                   {
+                       "name":  "YUNG\u0027s Cave Biomes (Forge/NeoForge)",
+                       "fileNameOnDisk":  "YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:32.6495788Z"
+                   },
+                   {
+                       "name":  "YUNG\u0027s API (NeoForge)",
+                       "fileNameOnDisk":  "YungsApi-1.21.1-NeoForge-5.1.6.jar",
+                       "dateInstalled":  "2026-06-17T03:48:22.4590434Z"
+                   },
+                   {
+                       "name":  "Placebo",
+                       "fileNameOnDisk":  "Placebo-1.21.1-9.9.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:31.7639624Z"
+                   },
+                   {
+                       "name":  "MekaGenJei (Mekanism Generator addon)",
+                       "fileNameOnDisk":  "mekagenjei-1.2.jar",
+                       "dateInstalled":  "2026-06-17T03:48:15.4838957Z"
+                   },
+                   {
+                       "name":  "Sildur\u0027s Vibrant shaders",
+                       "fileNameOnDisk":  "Sildur\u0027s Vibrant Shaders v1.56 Extreme.zip",
+                       "dateInstalled":  "2026-06-17T03:48:02.9360318Z"
+                   },
+                   {
+                       "name":  "Easy Villagers",
+                       "fileNameOnDisk":  "easy-villagers-neoforge-1.21.1-1.1.42.jar",
+                       "dateInstalled":  "2026-06-17T03:48:27.3155381Z"
+                   },
+                   {
+                       "name":  "Rechiseled: Chipped",
+                       "fileNameOnDisk":  "rechiseled_chipped-2.0-1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:09.0053966Z"
+                   },
+                   {
+                       "name":  "Bookshelf",
+                       "fileNameOnDisk":  "bookshelf-neoforge-1.21.1-21.1.81.jar",
+                       "dateInstalled":  "2026-06-17T03:48:06.8654823Z"
+                   },
+                   {
+                       "name":  "AEInfinityBooster",
+                       "fileNameOnDisk":  "aeinfinitybooster-neoforge-1.21.1-1.0.0.54.jar",
+                       "dateInstalled":  "2026-06-17T03:48:43.4130953Z"
+                   },
+                   {
+                       "name":  "Trading Post",
+                       "fileNameOnDisk":  "TradingPost-v21.1.1-1.21.1-NeoForge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:28.60678Z"
+                   },
+                   {
+                       "name":  "FramedBlocks",
+                       "fileNameOnDisk":  "FramedBlocks-10.6.0.jar",
+                       "dateInstalled":  "2026-06-17T03:48:42.6813093Z"
+                   },
+                   {
+                       "name":  "End Remastered [NeoForge/Fabric]",
+                       "fileNameOnDisk":  "endrem-neoforge-1.21.X-6.0.2.jar",
+                       "dateInstalled":  "2026-06-17T03:47:59.0333074Z"
+                   },
+                   {
+                       "name":  "Occultism",
+                       "fileNameOnDisk":  "occultism-1.21.1-neoforge-1.221.0.jar",
+                       "dateInstalled":  "2026-06-17T03:48:31.1990557Z"
+                   },
+                   {
+                       "name":  "YUNG\u0027s Better Witch Huts (NeoForge)",
+                       "fileNameOnDisk":  "YungsBetterWitchHuts-1.21.1-NeoForge-4.1.1.jar",
+                       "dateInstalled":  "2026-06-17T03:47:59.6175698Z"
+                   },
+                   {
+                       "name":  "Bliss Shaders",
+                       "fileNameOnDisk":  "Bliss_v2.1.2_(Chocapic13_Shaders_edit).zip",
+                       "dateInstalled":  "2026-06-17T03:48:52.2482397Z"
+                   },
+                   {
+                       "name":  "Simply Tooltips",
+                       "fileNameOnDisk":  "SimplyTooltips-neoforge-0.1.3.jar",
+                       "dateInstalled":  "2026-06-17T03:48:46.515489Z"
+                   },
+                   {
+                       "name":  "FastWorkbench",
+                       "fileNameOnDisk":  "FastWorkbench-1.21.1-9.1.3.jar",
+                       "dateInstalled":  "2026-06-17T03:48:55.3034485Z"
+                   },
+                   {
+                       "name":  "AE2: Crafting Tree",
+                       "fileNameOnDisk":  "ae2ct-1.21.1-1.1.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:17.0752036Z"
+                   },
+                   {
+                       "name":  "Xaero\u0027s Minimap",
+                       "fileNameOnDisk":  "xaerominimap-neoforge-1.21.1-26.1.0.jar",
+                       "dateInstalled":  "2026-06-17T03:48:35.0907063Z"
+                   },
+                   {
+                       "name":  "Artifacts",
+                       "fileNameOnDisk":  "artifacts-neoforge-13.2.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:38.5943136Z"
+                   },
+                   {
+                       "name":  "FerriteCore ((Neo)Forge)",
+                       "fileNameOnDisk":  "ferritecore-7.0.3-neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:47:57.8496071Z"
+                   },
+                   {
+                       "name":  "Macaw\u0027s Holidays",
+                       "fileNameOnDisk":  "mcw-holidays-1.1.2-mc1.21.1neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:47.1048643Z"
+                   },
+                   {
+                       "name":  "Patchouli",
+                       "fileNameOnDisk":  "Patchouli-1.21.1-93-NEOFORGE.jar",
+                       "dateInstalled":  "2026-06-17T03:48:25.1657557Z"
+                   },
+                   {
+                       "name":  "YUNG\u0027s Better End Island (NeoForge)",
+                       "fileNameOnDisk":  "YungsBetterEndIsland-1.21.1-NeoForge-3.1.2.jar",
+                       "dateInstalled":  "2026-06-17T03:48:11.022179Z"
+                   },
+                   {
+                       "name":  "FTB Library (NeoForge)",
+                       "fileNameOnDisk":  "ftb-library-neoforge-2101.1.32.jar",
+                       "dateInstalled":  "2026-06-17T03:48:08.6291791Z"
+                   },
+                   {
+                       "name":  "SmartBrainLib (Forge/Fabric/Quilt)",
+                       "fileNameOnDisk":  "SmartBrainLib-neoforge-1.21.1-1.16.11.jar",
+                       "dateInstalled":  "2026-06-17T03:48:27.4973152Z"
+                   },
+                   {
+                       "name":  "Just Dire Things",
+                       "fileNameOnDisk":  "justdirethings-1.5.7.jar",
+                       "dateInstalled":  "2026-06-17T03:48:02.0292224Z"
+                   },
+                   {
+                       "name":  "spark",
+                       "fileNameOnDisk":  "spark-1.10.124-neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:18.2897196Z"
+                   },
+                   {
+                       "name":  "MrCrayfish\u0027s Furniture Mod: Refurbished",
+                       "fileNameOnDisk":  "refurbished_furniture-neoforge-1.21.1-1.0.22.jar",
+                       "dateInstalled":  "2026-06-17T03:48:35.5184181Z"
+                   },
+                   {
+                       "name":  "Sodium Extra",
+                       "fileNameOnDisk":  "sodium-extra-neoforge-0.6.0+mc1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:04.2617742Z"
+                   },
+                   {
+                       "name":  "McJtyLib",
+                       "fileNameOnDisk":  "mcjtylib-1.21-9.0.21.jar",
+                       "dateInstalled":  "2026-06-17T03:48:43.0263943Z"
+                   },
+                   {
+                       "name":  "Fusion (Connected Textures)",
+                       "fileNameOnDisk":  "fusion-1.2.12-neoforge-mc1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:00.5852391Z"
+                   },
+                   {
+                       "name":  "Sophisticated Backpacks",
+                       "fileNameOnDisk":  "sophisticatedbackpacks-1.21.1-3.25.63.1912.jar",
+                       "dateInstalled":  "2026-06-17T03:48:44.7092204Z"
+                   },
+                   {
+                       "name":  "Sophisticated Core",
+                       "fileNameOnDisk":  "sophisticatedcore-1.21.1-1.4.58.2026.jar",
+                       "dateInstalled":  "2026-06-17T03:48:23.6291494Z"
+                   },
+                   {
+                       "name":  "Fzzy Config",
+                       "fileNameOnDisk":  "fzzy_config-0.7.6+1.21+neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:13.7625771Z"
+                   },
+                   {
+                       "name":  "FastSuite",
+                       "fileNameOnDisk":  "FastSuite-1.21.1-6.0.7.jar",
+                       "dateInstalled":  "2026-06-17T03:48:40.8748089Z"
+                   },
+                   {
+                       "name":  "YUNG\u0027s Better Caves (Forge/NeoForge)",
+                       "fileNameOnDisk":  "YungsBetterCaves-1.21.1-NeoForge-3.1.4.jar",
+                       "dateInstalled":  "2026-06-17T03:48:32.0888475Z"
+                   },
+                   {
+                       "name":  "[Let\u0027s Do] Bakery - Farm\u0026Charm Compat",
+                       "fileNameOnDisk":  "letsdo-bakery-neoforge-2.1.6.jar",
+                       "dateInstalled":  "2026-06-17T03:48:03.8630765Z"
+                   },
+                   {
+                       "name":  "Silent\u0027s Gems",
+                       "fileNameOnDisk":  "silentgems-1.21.1-neoforge-5.1.3.jar",
+                       "dateInstalled":  "2026-06-17T03:48:45.7397061Z"
+                   },
+                   {
+                       "name":  "Architectury API",
+                       "fileNameOnDisk":  "architectury-13.0.8-neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:06.2672819Z"
+                   },
+                   {
+                       "name":  "Botany Pots",
+                       "fileNameOnDisk":  "botanypots-neoforge-1.21.1-21.1.44.jar",
+                       "dateInstalled":  "2026-06-17T03:48:55.9222662Z"
+                   },
+                   {
+                       "name":  "XNet",
+                       "fileNameOnDisk":  "xnet-1.21-7.0.7.jar",
+                       "dateInstalled":  "2026-06-17T03:48:13.204533Z"
+                   },
+                   {
+                       "name":  "Corpse",
+                       "fileNameOnDisk":  "corpse-neoforge-1.21.1-1.1.13.jar",
+                       "dateInstalled":  "2026-06-17T03:48:02.2217152Z"
+                   },
+                   {
+                       "name":  "CodeChicken Lib 1.8.+",
+                       "fileNameOnDisk":  "CodeChickenLib-1.21.1-4.6.1.526.jar",
+                       "dateInstalled":  "2026-06-17T03:48:14.4682928Z"
+                   },
+                   {
+                       "name":  "Prickle",
+                       "fileNameOnDisk":  "prickle-neoforge-1.21.1-21.1.11.jar",
+                       "dateInstalled":  "2026-06-17T03:48:58.8057282Z"
+                   },
+                   {
+                       "name":  "Balm",
+                       "fileNameOnDisk":  "balm-neoforge-1.21.1-21.0.59.jar",
+                       "dateInstalled":  "2026-06-17T03:48:01.829039Z"
+                   },
+                   {
+                       "name":  "Botany Trees",
+                       "fileNameOnDisk":  "botanytrees-neoforge-1.21.1-21.1.7.jar",
+                       "dateInstalled":  "2026-06-17T03:48:52.4527285Z"
+                   },
+                   {
+                       "name":  "Paragliders",
+                       "fileNameOnDisk":  "Paraglider-neoforge-21.1.5.jar",
+                       "dateInstalled":  "2026-06-17T03:48:34.7013365Z"
+                   },
+                   {
+                       "name":  "Athena",
+                       "fileNameOnDisk":  "athena-neoforge-1.21.1-4.0.6.jar",
+                       "dateInstalled":  "2026-06-17T03:48:56.9929547Z"
+                   },
+                   {
+                       "name":  "Ender IO",
+                       "fileNameOnDisk":  "enderio-8.2.11-beta.jar",
+                       "dateInstalled":  "2026-06-17T03:48:27.1250916Z"
+                   },
+                   {
+                       "name":  "Mekanism:More Machine",
+                       "fileNameOnDisk":  "mekmm-1.21.1-1.3.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:26.3208155Z"
+                   },
+                   {
+                       "name":  "Cucumber Library",
+                       "fileNameOnDisk":  "Cucumber-1.21.1-8.0.16.jar",
+                       "dateInstalled":  "2026-06-17T03:48:52.6519211Z"
+                   },
+                   {
+                       "name":  "YUNG\u0027s Better Mineshafts (NeoForge)",
+                       "fileNameOnDisk":  "YungsBetterMineshafts-1.21.1-NeoForge-5.1.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:34.1778378Z"
+                   },
+                   {
+                       "name":  "Hexerei",
+                       "fileNameOnDisk":  "hexerei-0.5.0.3.jar",
+                       "dateInstalled":  "2026-06-17T03:48:58.4265623Z"
+                   },
+                   {
+                       "name":  "Advanced Loot Info",
+                       "fileNameOnDisk":  "AdvancedLootInfo-neoforge-1.21.1-1.12.0.jar",
+                       "dateInstalled":  "2026-06-17T03:48:01.4940071Z"
+                   },
+                   {
+                       "name":  "Macaw\u0027s Paths and Pavings",
+                       "fileNameOnDisk":  "mcw-mcwpaths-1.1.1-mc1.21.1neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:07.0491978Z"
+                   },
+                   {
+                       "name":  "FTB JEI Extras",
+                       "fileNameOnDisk":  "ftb-jei-extras-21.1.7.jar",
+                       "dateInstalled":  "2026-06-17T03:48:12.5070535Z"
+                   },
+                   {
+                       "name":  "Puzzles Lib",
+                       "fileNameOnDisk":  "PuzzlesLib-v21.1.52-1.21.1-NeoForge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:00.9504101Z"
+                   },
+                   {
+                       "name":  "Extreme Reactors",
+                       "fileNameOnDisk":  "ExtremeReactors2-1.21.1-2.4.28.jar",
+                       "dateInstalled":  "2026-06-17T03:48:07.6055033Z"
+                   },
+                   {
+                       "name":  "Mekanism Generators",
+                       "fileNameOnDisk":  "MekanismGenerators-1.21.1-10.7.19.85.jar",
+                       "dateInstalled":  "2026-06-17T03:47:58.0229478Z"
+                   },
+                   {
+                       "name":  "Plasmo Voice",
+                       "fileNameOnDisk":  "plasmovoice-neoforge-1.21.1-2.1.10.jar",
+                       "dateInstalled":  "2026-06-17T03:48:18.9793288Z"
+                   },
+                   {
+                       "name":  "AE2 JEI Integration",
+                       "fileNameOnDisk":  "ae2jeiintegration-1.2.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:36.6512895Z"
+                   },
+                   {
+                       "name":  "Apothic Attributes",
+                       "fileNameOnDisk":  "ApothicAttributes-1.21.1-2.9.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:36.466637Z"
+                   },
+                   {
+                       "name":  "Alex\u0027s Mobs (Unofficial Port)",
+                       "fileNameOnDisk":  "alexsmobs-1.22.17.jar",
+                       "dateInstalled":  "2026-06-17T03:49:00.1542286Z"
+                   },
+                   {
+                       "name":  "Mekanism Unleashed",
+                       "fileNameOnDisk":  "mekanism_unleashed-0.3.4.jar",
+                       "dateInstalled":  "2026-06-17T03:48:20.6229418Z"
+                   },
+                   {
+                       "name":  "Xaero\u0027s World Map",
+                       "fileNameOnDisk":  "xaeroworldmap-neoforge-1.21.1-1.41.0.jar",
+                       "dateInstalled":  "2026-06-17T03:48:12.8653367Z"
+                   },
+                   {
+                       "name":  "EvilCraft",
+                       "fileNameOnDisk":  "evilcraft-1.21.1-neoforge-1.2.89.jar",
+                       "dateInstalled":  "2026-06-17T03:48:17.4750321Z"
+                   },
+                   {
+                       "name":  "TerraBlender (NeoForge)",
+                       "fileNameOnDisk":  "TerraBlender-neoforge-1.21.1-4.1.0.8.jar",
+                       "dateInstalled":  "2026-06-17T03:48:05.8768886Z"
+                   },
+                   {
+                       "name":  "AdvancedAE",
+                       "fileNameOnDisk":  "AdvancedAE-1.6.11-1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:10.0750083Z"
+                   },
+                   {
+                       "name":  "Macaw\u0027s Fences and Walls",
+                       "fileNameOnDisk":  "mcw-mcwfences-1.2.1-mc1.21.1neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:49:00.3617368Z"
+                   },
+                   {
+                       "name":  "playerAnimator",
+                       "fileNameOnDisk":  "player-animation-lib-forge-2.0.4+1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:56.7977537Z"
+                   },
+                   {
+                       "name":  "ZeroCore 2",
+                       "fileNameOnDisk":  "ZeroCore2-1.21.1-2.4.21.jar",
+                       "dateInstalled":  "2026-06-17T03:48:08.817168Z"
+                   },
+                   {
+                       "name":  "MekaJadeUpgrades (Mekanism addon)",
+                       "fileNameOnDisk":  "mekajadeupgrade-1.3.jar",
+                       "dateInstalled":  "2026-06-17T03:48:06.6627231Z"
+                   },
+                   {
+                       "name":  "SuperMartijn642\u0027s Config Lib",
+                       "fileNameOnDisk":  "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+                       "dateInstalled":  "2026-06-17T03:48:04.0726217Z"
+                   },
+                   {
+                       "name":  "Macaw\u0027s Roofs",
+                       "fileNameOnDisk":  "mcw-roofs-2.3.2-mc1.21.1neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:00.3830617Z"
+                   },
+                   {
+                       "name":  "Resourceful Lib",
+                       "fileNameOnDisk":  "resourcefullib-neoforge-1.21-3.0.12.jar",
+                       "dateInstalled":  "2026-06-17T03:48:17.8697576Z"
+                   },
+                   {
+                       "name":  "FTB Chunks (NeoForge)",
+                       "fileNameOnDisk":  "ftb-chunks-neoforge-2101.1.18.jar",
+                       "dateInstalled":  "2026-06-17T03:48:23.167491Z"
+                   },
+                   {
+                       "name":  "Silent Lib (silentlib)",
+                       "fileNameOnDisk":  "silent-lib-1.21.1-neoforge-10.6.0.jar",
+                       "dateInstalled":  "2026-06-17T03:48:16.3295629Z"
+                   },
+                   {
+                       "name":  "Photon Shader",
+                       "fileNameOnDisk":  "photon_v1.3b.zip",
+                       "dateInstalled":  "2026-06-17T03:48:28.2631085Z"
+                   },
+                   {
+                       "name":  "RFTools Base",
+                       "fileNameOnDisk":  "rftoolsbase-1.21-6.0.11.jar",
+                       "dateInstalled":  "2026-06-17T03:48:29.2115529Z"
+                   },
+                   {
+                       "name":  "Compass to Map: Xaero\u0027s Minimap \u0026 Explorer\u0027s Compass \u0026 Nature\u0027s Compass Addon",
+                       "fileNameOnDisk":  "c2mx-neoforge-1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:10.8246362Z"
+                   },
+                   {
+                       "name":  "Explorify â€“ Dungeons \u0026 Structures",
+                       "fileNameOnDisk":  "Explorify v1.6.5.mod.jar",
+                       "dateInstalled":  "2026-06-17T03:47:59.421566Z"
+                   },
+                   {
+                       "name":  "RFTools Utility",
+                       "fileNameOnDisk":  "rftoolsutility-1.21-7.0.12.jar",
+                       "dateInstalled":  "2026-06-17T03:48:18.7796156Z"
+                   },
+                   {
+                       "name":  "Lithostitched",
+                       "fileNameOnDisk":  "lithostitched-1.7.9-neoforge-21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:29.8239045Z"
+                   },
+                   {
+                       "name":  "Sodium/Embeddium Options API",
+                       "fileNameOnDisk":  "sodiumoptionsapi-neoforge-1.0.10-1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:31.3931074Z"
+                   },
+                   {
+                       "name":  "Jade ðŸ”",
+                       "fileNameOnDisk":  "Jade-1.21.1-NeoForge-15.10.5.jar",
+                       "dateInstalled":  "2026-06-17T03:48:51.9941001Z"
+                   },
+                   {
+                       "name":  "CreativeCore",
+                       "fileNameOnDisk":  "CreativeCore_NEOFORGE_v2.13.41_mc1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:47.4529288Z"
+                   },
+                   {
+                       "name":  "RFTools Storage",
+                       "fileNameOnDisk":  "rftoolsstorage-1.21-6.0.5.jar",
+                       "dateInstalled":  "2026-06-17T03:48:24.5384434Z"
+                   },
+                   {
+                       "name":  "Immersive Melodies [Fabric/Forge]",
+                       "fileNameOnDisk":  "immersive_melodies-neoforge-0.6.4+1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:57.5129133Z"
+                   },
+                   {
+                       "name":  "Botany Pots Tiers",
+                       "fileNameOnDisk":  "botanypotstiers-neoforge-1.21.1-7.0.11.jar",
+                       "dateInstalled":  "2026-06-17T03:48:05.6774255Z"
+                   },
+                   {
+                       "name":  "Framework",
+                       "fileNameOnDisk":  "framework-neoforge-1.21.1-0.13.11.jar",
+                       "dateInstalled":  "2026-06-17T03:48:38.0065745Z"
+                   },
+                   {
+                       "name":  "Tom\u0027s Simple Storage Mod",
+                       "fileNameOnDisk":  "toms_storage-1.21-2.3.2.jar",
+                       "dateInstalled":  "2026-06-17T03:48:24.0805411Z"
+                   },
+                   {
+                       "name":  "Entity Culling Fabric/Forge",
+                       "fileNameOnDisk":  "entityculling-neoforge-1.10.3-mc1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:56.3250151Z"
+                   },
+                   {
+                       "name":  "Sodium",
+                       "fileNameOnDisk":  "sodium-neoforge-0.6.13+mc1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:43.2228261Z"
+                   },
+                   {
+                       "name":  "Iron Furnaces",
+                       "fileNameOnDisk":  "ironfurnaces-neoforge-1.21.1-4.3.2.jar",
+                       "dateInstalled":  "2026-06-17T03:48:41.912456Z"
+                   },
+                   {
+                       "name":  "Mining Dimension Repolished",
+                       "fileNameOnDisk":  "mining_dimension_repolished-1.0.1-neoforge-1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:40.0593849Z"
+                   },
+                   {
+                       "name":  "Silent Gear JEI",
+                       "fileNameOnDisk":  "silentgearjei-1.1.9.jar",
+                       "dateInstalled":  "2026-06-17T03:49:01.1063705Z"
+                   },
+                   {
+                       "name":  "Building Gadgets",
+                       "fileNameOnDisk":  "buildinggadgets2-1.3.9.jar",
+                       "dateInstalled":  "2026-06-17T03:48:37.7580423Z"
+                   },
+                   {
+                       "name":  "FTB Filter System",
+                       "fileNameOnDisk":  "ftb-filter-system-neoforge-21.1.4.jar",
+                       "dateInstalled":  "2026-06-17T03:48:15.9113807Z"
+                   },
+                   {
+                       "name":  "Rechiseled",
+                       "fileNameOnDisk":  "rechiseled-1.2.4-neoforge-mc1.21.jar",
+                       "dateInstalled":  "2026-06-17T03:48:24.7736247Z"
+                   },
+                   {
+                       "name":  "Iron\u0027s Lib",
+                       "fileNameOnDisk":  "irons_lib-1.21.1-1.1.0.jar",
+                       "dateInstalled":  "2026-06-17T03:48:36.9739253Z"
+                   },
+                   {
+                       "name":  "Apothic Enchanting",
+                       "fileNameOnDisk":  "ApothicEnchanting-1.21.1-1.5.3.jar",
+                       "dateInstalled":  "2026-06-17T03:48:40.5380644Z"
+                   },
+                   {
+                       "name":  "FTB Teams (NeoForge)",
+                       "fileNameOnDisk":  "ftb-teams-neoforge-2101.1.10.jar",
+                       "dateInstalled":  "2026-06-17T03:48:54.0011709Z"
+                   },
+                   {
+                       "name":  "Simply More",
+                       "fileNameOnDisk":  "simplymore-forge-1.2.3.jar",
+                       "dateInstalled":  "2026-06-17T03:48:07.4063265Z"
+                   },
+                   {
+                       "name":  "Glodium",
+                       "fileNameOnDisk":  "Glodium-1.21-2.2-neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:44.9029287Z"
+                   },
+                   {
+                       "name":  "Structure Layout Optimizer",
+                       "fileNameOnDisk":  "structure_layout_optimizer-neoforge-1.0.12.jar",
+                       "dateInstalled":  "2026-06-17T03:48:22.7749412Z"
+                   },
+                   {
+                       "name":  "Reese\u0027s Sodium Options",
+                       "fileNameOnDisk":  "reeses-sodium-options-neoforge-1.8.3+mc1.21.4.jar",
+                       "dateInstalled":  "2026-06-17T03:48:35.6952321Z"
+                   },
+                   {
+                       "name":  "GuideME",
+                       "fileNameOnDisk":  "guideme-21.1.16.jar",
+                       "dateInstalled":  "2026-06-17T03:48:09.8754918Z"
+                   },
+                   {
+                       "name":  "Cooking for Blockheads",
+                       "fileNameOnDisk":  "cookingforblockheads-neoforge-1.21.1-21.1.23.jar",
+                       "dateInstalled":  "2026-06-17T03:48:51.2228822Z"
+                   },
+                   {
+                       "name":  "Iris Shaders",
+                       "fileNameOnDisk":  "iris-neoforge-1.8.12+mc1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:47:59.803468Z"
+                   },
+                   {
+                       "name":  "YUNG\u0027s Better Ocean Monuments (NeoForge)",
+                       "fileNameOnDisk":  "YungsBetterOceanMonuments-1.21.1-NeoForge-4.1.2.jar",
+                       "dateInstalled":  "2026-06-17T03:49:00.5606325Z"
+                   },
+                   {
+                       "name":  "Dynamic FPS",
+                       "fileNameOnDisk":  "dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:38.9189858Z"
+                   },
+                   {
+                       "name":  "Resourceful Config",
+                       "fileNameOnDisk":  "resourcefulconfig-neoforge-1.21-3.0.11.jar",
+                       "dateInstalled":  "2026-06-17T03:48:30.3080481Z"
+                   },
+                   {
+                       "name":  "Sophisticated Storage",
+                       "fileNameOnDisk":  "sophisticatedstorage-1.21.1-1.5.60.1851.jar",
+                       "dateInstalled":  "2026-06-17T03:48:08.2578374Z"
+                   },
+                   {
+                       "name":  "Clumps",
+                       "fileNameOnDisk":  "Clumps-neoforge-1.21.1-19.0.0.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:30.1178451Z"
+                   },
+                   {
+                       "name":  "The Brazilian Localization Project [PT-BR]",
+                       "fileNameOnDisk":  "The Brazilian Project [1.21.1-1.3.0].zip",
+                       "dateInstalled":  "2026-06-17T03:48:49.3731452Z"
+                   },
+                   {
+                       "name":  "AE2 Network Analyser",
+                       "fileNameOnDisk":  "AE2NetworkAnalyzer-1.21-2.1.5-neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:19.6636298Z"
+                   },
+                   {
+                       "name":  "Mekanism Additions",
+                       "fileNameOnDisk":  "MekanismAdditions-1.21.1-10.7.19.85.jar",
+                       "dateInstalled":  "2026-06-17T03:48:13.5607221Z"
+                   },
+                   {
+                       "name":  "Iron\u0027s Spells \u0027n Spellbooks",
+                       "fileNameOnDisk":  "irons_spellbooks-1.21.1-3.16.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:33.6276469Z"
+                   },
+                   {
+                       "name":  "Waystones",
+                       "fileNameOnDisk":  "waystones-neoforge-1.21.1-21.1.34.jar",
+                       "dateInstalled":  "2026-06-17T03:48:38.2263332Z"
+                   },
+                   {
+                       "name":  "Flux Networks",
+                       "fileNameOnDisk":  "FluxNetworks-1.21.1-8.0.0.jar",
+                       "dateInstalled":  "2026-06-17T03:47:58.422296Z"
+                   },
+                   {
+                       "name":  "CC: Tweaked",
+                       "fileNameOnDisk":  "cc-tweaked-1.21.1-forge-1.113.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:10.3307062Z"
+                   },
+                   {
+                       "name":  "Ender Storage 1.8.+",
+                       "fileNameOnDisk":  "EnderStorage-1.21.1-2.13.0.191.jar",
+                       "dateInstalled":  "2026-06-17T03:47:58.8431108Z"
+                   },
+                   {
+                       "name":  "MmmMmmMmmMmm (Target Dummy)",
+                       "fileNameOnDisk":  "dummmmmmy-1.21-2.0.12-neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:39.7054638Z"
+                   },
+                   {
+                       "name":  "Silent Gear",
+                       "fileNameOnDisk":  "silent-gear-1.21.1-neoforge-4.2.1.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:09.2829721Z"
+                   },
+                   {
+                       "name":  "ServerCore",
+                       "fileNameOnDisk":  "servercore-neoforge-1.5.17+1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:37.539445Z"
+                   },
+                   {
+                       "name":  "Cloth Config API (Fabric/Forge/NeoForge)",
+                       "fileNameOnDisk":  "cloth-config-15.0.140-neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:27.9602084Z"
+                   },
+                   {
+                       "name":  "FancyMenu",
+                       "fileNameOnDisk":  "fancymenu_neoforge_3.9.1_MC_1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:12.3113437Z"
+                   },
+                   {
+                       "name":  "Moonlight Lib",
+                       "fileNameOnDisk":  "moonlight-neoforge-1.21.1-3.0.17.jar",
+                       "dateInstalled":  "2026-06-17T03:48:27.7346876Z"
+                   },
+                   {
+                       "name":  "Complementary Shaders - Reimagined",
+                       "fileNameOnDisk":  "ComplementaryReimagined_r5.8.1.zip",
+                       "dateInstalled":  "2026-06-17T03:48:04.688686Z"
+                   },
+                   {
+                       "name":  "FTB Ultimine (NeoForge)",
+                       "fileNameOnDisk":  "ftb-ultimine-neoforge-2101.1.15.jar",
+                       "dateInstalled":  "2026-06-17T03:49:01.4852848Z"
+                   },
+                   {
+                       "name":  "YUNG\u0027s Better Nether Fortresses (NeoForge)",
+                       "fileNameOnDisk":  "YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar",
+                       "dateInstalled":  "2026-06-17T03:48:02.5072341Z"
+                   },
+                   {
+                       "name":  "Applied Energistics 2 Wireless Terminals",
+                       "fileNameOnDisk":  "ae2wtlib-19.5.0.jar",
+                       "dateInstalled":  "2026-06-17T03:48:56.6034886Z"
+                   },
+                   {
+                       "name":  "Immersive Paintings [Fabric/Forge]",
+                       "fileNameOnDisk":  "immersive_paintings-neoforge-1.21.1-0.7.8.jar",
+                       "dateInstalled":  "2026-06-17T03:48:39.4101508Z"
+                   },
+                   {
+                       "name":  "Melody",
+                       "fileNameOnDisk":  "melody_neoforge_1.0.10_MC_1.21.jar",
+                       "dateInstalled":  "2026-06-17T03:48:30.6528949Z"
+                   },
+                   {
+                       "name":  "Explorer\u0027s Compass",
+                       "fileNameOnDisk":  "ExplorersCompass-1.21.1-3.4.0-neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:49.5694284Z"
+                   },
+                   {
+                       "name":  "Controlling",
+                       "fileNameOnDisk":  "Controlling-neoforge-1.21.1-19.0.5.jar",
+                       "dateInstalled":  "2026-06-17T03:48:35.3179302Z"
+                   },
+                   {
+                       "name":  "Mystical Agriculture",
+                       "fileNameOnDisk":  "MysticalAgriculture-1.21.1-8.0.26.jar",
+                       "dateInstalled":  "2026-06-17T03:48:06.0804619Z"
+                   },
+                   {
+                       "name":  "AstikorCarts Redux",
+                       "fileNameOnDisk":  "astikorcartsredux-1.2.2.jar",
+                       "dateInstalled":  "2026-06-17T03:48:54.7487719Z"
+                   },
+                   {
+                       "name":  "Macaw\u0027s Furniture",
+                       "fileNameOnDisk":  "mcw-furniture-3.4.1-mc1.21.1neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:14.2811566Z"
+                   },
+                   {
+                       "name":  "Torchmaster",
+                       "fileNameOnDisk":  "torchmaster-neoforge-1.21.1-21.1.9.jar",
+                       "dateInstalled":  "2026-06-17T03:48:01.1580326Z"
+                   },
+                   {
+                       "name":  "Oritech Things",
+                       "fileNameOnDisk":  "oritechthings-0.0.44.jar",
+                       "dateInstalled":  "2026-06-17T03:48:42.2384458Z"
+                   },
+                   {
+                       "name":  "Cyclops Core",
+                       "fileNameOnDisk":  "cyclopscore-1.21.1-neoforge-1.29.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:49.7507892Z"
+                   },
+                   {
+                       "name":  "Simply Swords [Fabric \u0026 Forge]",
+                       "fileNameOnDisk":  "simplyswords-neoforge-1.63.0-1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:51.8006801Z"
+                   },
+                   {
+                       "name":  "YUNG\u0027s Better Desert Temples (NeoForge)",
+                       "fileNameOnDisk":  "YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar",
+                       "dateInstalled":  "2026-06-17T03:48:52.835684Z"
+                   },
+                   {
+                       "name":  "ModernFix",
+                       "fileNameOnDisk":  "modernfix-neoforge-5.27.14+mc1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:03.277113Z"
+                   },
+                   {
+                       "name":  "Chipped",
+                       "fileNameOnDisk":  "chipped-neoforge-1.21.1-4.0.2.jar",
+                       "dateInstalled":  "2026-06-17T03:48:53.0702588Z"
+                   },
+                   {
+                       "name":  "YUNG\u0027s Better Dungeons (NeoForge)",
+                       "fileNameOnDisk":  "YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar",
+                       "dateInstalled":  "2026-06-17T03:47:59.2331412Z"
+                   },
+                   {
+                       "name":  "Pylons",
+                       "fileNameOnDisk":  "pylons-1.21.1-5.4.2.jar",
+                       "dateInstalled":  "2026-06-17T03:48:43.5889366Z"
+                   },
+                   {
+                       "name":  "YUNG\u0027s Better Jungle Temples (NeoForge)",
+                       "fileNameOnDisk":  "YungsBetterJungleTemples-1.21.1-NeoForge-3.1.2.jar",
+                       "dateInstalled":  "2026-06-17T03:48:44.4752343Z"
+                   },
+                   {
+                       "name":  "Just Enough Items (JEI)",
+                       "fileNameOnDisk":  "jei-1.21.1-neoforge-19.27.0.336.jar",
+                       "dateInstalled":  "2026-06-17T03:48:37.1783885Z"
+                   },
+                   {
+                       "name":  "AE2 Import Export Card",
+                       "fileNameOnDisk":  "ae2importexportcard-1.21.1-1.5.0.jar",
+                       "dateInstalled":  "2026-06-17T03:48:53.8168666Z"
+                   },
+                   {
+                       "name":  "Lionfish API",
+                       "fileNameOnDisk":  "lionfishapi-3.0.jar",
+                       "dateInstalled":  "2026-06-17T03:48:20.2068958Z"
+                   },
+                   {
+                       "name":  "Item Collectors",
+                       "fileNameOnDisk":  "itemcollectors-1.1.10-neoforge-mc1.21.jar",
+                       "dateInstalled":  "2026-06-17T03:48:23.824666Z"
+                   },
+                   {
+                       "name":  "Macaw\u0027s Bridges",
+                       "fileNameOnDisk":  "mcw-bridges-3.1.2-mc1.21.1neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:29.6052431Z"
+                   },
+                   {
+                       "name":  "Lootr (Forge \u0026 NeoForge)",
+                       "fileNameOnDisk":  "lootr-neoforge-1.21.1-1.11.37.120.jar",
+                       "dateInstalled":  "2026-06-17T03:48:25.5388585Z"
+                   },
+                   {
+                       "name":  "Xaero\u0027s Minimap \u0026 World Map - Waystones Compatibility [Forge \u0026 NeoForge]",
+                       "fileNameOnDisk":  "xaeros_waystones_compatibility-NeoForge-1.21.1-2.1.0.jar",
+                       "dateInstalled":  "2026-06-17T03:48:51.0251715Z"
+                   },
+                   {
+                       "name":  "SuperMartijn642\u0027s Core Lib",
+                       "fileNameOnDisk":  "supermartijn642corelib-1.1.21-neoforge-mc1.21.jar",
+                       "dateInstalled":  "2026-06-17T03:48:33.8083163Z"
+                   },
+                   {
+                       "name":  "Lodestone",
+                       "fileNameOnDisk":  "lodestone-1.21.1-1.8.2.jar",
+                       "dateInstalled":  "2026-06-17T03:48:38.4154287Z"
+                   },
+                   {
+                       "name":  "Konkrete",
+                       "fileNameOnDisk":  "konkrete_neoforge_1.9.9_MC_1.21.jar",
+                       "dateInstalled":  "2026-06-17T03:48:02.7063553Z"
+                   },
+                   {
+                       "name":  "Powah! (Rearchitected)",
+                       "fileNameOnDisk":  "Powah-6.2.10.jar",
+                       "dateInstalled":  "2026-06-17T03:48:54.9360702Z"
+                   },
+                   {
+                       "name":  "ExtendedAE",
+                       "fileNameOnDisk":  "ExtendedAE-1.21-2.2.32-neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:33.9944058Z"
+                   },
+                   {
+                       "name":  "Mob Grinding Utils",
+                       "fileNameOnDisk":  "mob_grinding_utils-1.1.10+mc1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:25.3480349Z"
+                   },
+                   {
+                       "name":  "Modular Routers",
+                       "fileNameOnDisk":  "modular-routers-13.2.5+mc1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:16.5664232Z"
+                   },
+                   {
+                       "name":  "Mekanism Tools",
+                       "fileNameOnDisk":  "MekanismTools-1.21.1-10.7.19.85.jar",
+                       "dateInstalled":  "2026-06-17T03:48:11.194683Z"
+                   },
+                   {
+                       "name":  "Actually Additions",
+                       "fileNameOnDisk":  "actuallyadditions-1.3.25+mc1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:32.8499227Z"
+                   },
+                   {
+                       "name":  "Functional Storage",
+                       "fileNameOnDisk":  "functionalstorage-1.21.1-1.5.4.jar",
+                       "dateInstalled":  "2026-06-17T03:48:46.7045426Z"
+                   },
+                   {
+                       "name":  "Macaw\u0027s Windows",
+                       "fileNameOnDisk":  "mcw-mcwwindows-2.4.2-mc1.21.1neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:21.4941128Z"
+                   },
+                   {
+                       "name":  "Oritech",
+                       "fileNameOnDisk":  "oritech-neoforge-1.21.1-1.2.7.jar",
+                       "dateInstalled":  "2026-06-17T03:48:44.2648758Z"
+                   },
+                   {
+                       "name":  "Productive Bees",
+                       "fileNameOnDisk":  "productivebees-1.21.1-13.13.5.jar",
+                       "dateInstalled":  "2026-06-17T03:48:18.0584671Z"
+                   },
+                   {
+                       "name":  "Searchables",
+                       "fileNameOnDisk":  "Searchables-neoforge-1.21.1-1.0.2.jar",
+                       "dateInstalled":  "2026-06-17T03:48:23.3704506Z"
+                   },
+                   {
+                       "name":  "Macaw\u0027s Stairs",
+                       "fileNameOnDisk":  "mcw-mcwstairs-1.0.2-mc1.21.1neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:55.1124762Z"
+                   },
+                   {
+                       "name":  "Mekanism",
+                       "fileNameOnDisk":  "Mekanism-1.21.1-10.7.19.85.jar",
+                       "dateInstalled":  "2026-06-17T03:47:58.6525279Z"
+                   },
+                   {
+                       "name":  "BetterBlockZ",
+                       "fileNameOnDisk":  "betterblockz-0.2.9-1.21.1-neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:55.689338Z"
+                   },
+                   {
+                       "name":  "Macaw\u0027s Trapdoors",
+                       "fileNameOnDisk":  "mcw-trapdoors-1.1.5-mc1.21.1neoforge.jar",
+                       "dateInstalled":  "2026-06-17T03:48:15.7264349Z"
+                   },
+                   {
+                       "name":  "PneumaticCraft: Repressurized",
+                       "fileNameOnDisk":  "pneumaticcraft-repressurized-8.2.20+mc1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:24.9832949Z"
+                   },
+                   {
+                       "name":  "Complementary Shaders - Unbound",
+                       "fileNameOnDisk":  "ComplementaryUnbound_r5.8.1.zip",
+                       "dateInstalled":  "2026-06-17T03:48:00.1920806Z"
+                   },
+                   {
+                       "name":  "GeckoLib",
+                       "fileNameOnDisk":  "geckolib-neoforge-1.21.1-4.8.4.jar",
+                       "dateInstalled":  "2026-06-17T03:48:41.6996569Z"
+                   },
+                   {
+                       "name":  "Farmer\u0027s Sandwiches (A Farmer\u0027s Delight Add-on)",
+                       "fileNameOnDisk":  "farmers_sandwiches-0.1.2-neoforge-1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:14.0867011Z"
+                   },
+                   {
+                       "name":  "[Let\u0027s Do] Farm \u0026 Charm",
+                       "fileNameOnDisk":  "letsdo-farm_and_charm-neoforge-1.1.22.jar",
+                       "dateInstalled":  "2026-06-17T03:48:50.0445493Z"
+                   },
+                   {
+                       "name":  "Lithium (Fabric/NeoForge)",
+                       "fileNameOnDisk":  "lithium-neoforge-0.15.3+mc1.21.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:16.1358151Z"
+                   },
+                   {
+                       "name":  "Modonomicon",
+                       "fileNameOnDisk":  "modonomicon-1.21.1-neoforge-1.120.1.jar",
+                       "dateInstalled":  "2026-06-17T03:48:31.5701316Z"
+                   },
+                   {
+                       "name":  "Botany Pots - Mystical Agriculture Compat",
+                       "fileNameOnDisk":  "botanypotsmystical-neoforge-1.21.1-21.1.12.jar",
+                       "dateInstalled":  "2026-06-17T03:48:46.8984441Z"
+                   },
+                   {
+                       "name":  "Malum",
+                       "fileNameOnDisk":  "malum-1.21.1-1.8.2.jar",
+                       "dateInstalled":  "2026-06-17T03:48:26.6023407Z"
+                   },
+                   {
+                       "name":  "Farmer\u0027s Delight",
+                       "fileNameOnDisk":  "FarmersDelight-1.21.1-1.3.2.jar",
+                       "dateInstalled":  "2026-06-17T03:48:21.0262833Z"
+                   },
+                   {
+                       "name":  "Titanium",
+                       "fileNameOnDisk":  "titanium-1.21-4.0.43.jar",
+                       "dateInstalled":  "2026-06-17T03:48:34.3658605Z"
+                   },
+                   {
+                       "name":  "Applied Energistics 2",
+                       "fileNameOnDisk":  "appliedenergistics2-19.2.17.jar",
+                       "dateInstalled":  "2026-06-17T03:47:58.2233757Z"
+                   },
+                   {
+                       "name":  "Chunky (Forge/NeoForge)",
+                       "fileNameOnDisk":  "Chunky-NeoForge-1.4.23.jar",
+                       "dateInstalled":  "2026-06-17T03:49:01.2885387Z"
+                   }
+               ],
+    "instancePath":  "G:\\CurseForge\\minecraft\\Instances\\Nerds Quadrados",
+    "neoforge":  "21.1.233",
+    "snapshotDate":  "2026-06-17",
+    "minecraft":  "1.21.1",
+    "modJarCount":  196
+}

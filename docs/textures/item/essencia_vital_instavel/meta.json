@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:essencia_vital_instavel",
+  "type": "item",
+  "display_name": "Plasma de Sangue Condenado",
+  "module": "magia",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/essencia_vital_instavel.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/essencia_vital_instavel.json",
+  "active_option": "a"
+}

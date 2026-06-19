@@ -1,0 +1,11 @@
+{
+  "id": "nerdkube:semente_criacao",
+  "type": "item",
+  "display_name": "Semente da Criação",
+  "module": "agriculture",
+  "pedestal": "west",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/semente_criacao.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/semente_criacao.json",
+  "active_option": "a"
+}

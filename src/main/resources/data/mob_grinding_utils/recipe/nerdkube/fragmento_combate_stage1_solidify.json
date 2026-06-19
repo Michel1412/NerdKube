@@ -1,0 +1,11 @@
+{
+  "type": "mob_grinding_utils:solidify",
+  "fluidAmount": 5000,
+  "ingredient": {
+    "item": "minecraft:wither_skeleton_skull"
+  },
+  "result": {
+    "count": 1,
+    "id": "nerdkube:fragmento_combate_stage1"
+  }
+}

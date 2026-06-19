@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:raiz_em_conserva",
+  "type": "item",
+  "display_name": "Raiz em Conserva",
+  "module": "agriculture",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/raiz_em_conserva.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/raiz_em_conserva.json",
+  "active_option": "a"
+}

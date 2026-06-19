@@ -1,0 +1,15 @@
+{
+  "id": "nerdkube:pedestal_tech",
+  "type": "block",
+  "display_name": "Pedestal de Tecnologia",
+  "pedestal_direction": "north",
+  "amulet_item": "nerdkube:nucleo_de_materia",
+  "resolution": 16,
+  "output_png": {
+    "side": "src/main/resources/assets/nerdkube/textures/block/pedestal_tech_side.png",
+    "top": "src/main/resources/assets/nerdkube/textures/block/pedestal_tech_top.png"
+  },
+  "model_json": "src/main/resources/assets/nerdkube/models/block/pedestal_tech.json",
+  "active_option": "a",
+  "face_layout": "side_top"
+}

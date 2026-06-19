@@ -1,0 +1,11 @@
+{
+  "id": "nerdkube:coracao_arcano",
+  "type": "item",
+  "display_name": "Coração Arcano",
+  "module": "magic",
+  "pedestal": "south",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/coracao_arcano.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/coracao_arcano.json",
+  "active_option": "b"
+}

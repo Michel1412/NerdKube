@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:componente_magia_stage1_completo",
+  "type": "item",
+  "display_name": "Coração Sombrio Purificado",
+  "module": "magia",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/componente_magia_stage1_completo.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/componente_magia_stage1_completo.json",
+  "active_option": "a"
+}

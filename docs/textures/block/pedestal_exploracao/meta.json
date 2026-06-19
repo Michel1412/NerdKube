@@ -1,0 +1,15 @@
+{
+  "id": "nerdkube:pedestal_exploracao",
+  "type": "block",
+  "display_name": "Pedestal de Exploração",
+  "pedestal_direction": "east",
+  "amulet_item": "nerdkube:reliquia_desbravador",
+  "resolution": 16,
+  "output_png": {
+    "side": "src/main/resources/assets/nerdkube/textures/block/pedestal_exploracao_side.png",
+    "top": "src/main/resources/assets/nerdkube/textures/block/pedestal_exploracao_top.png"
+  },
+  "model_json": "src/main/resources/assets/nerdkube/models/block/pedestal_exploracao.json",
+  "active_option": "b",
+  "face_layout": "side_top"
+}

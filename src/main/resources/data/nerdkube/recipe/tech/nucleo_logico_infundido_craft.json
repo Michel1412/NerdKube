@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": { "item": "rftoolsbase:infused_enderpearl" },
+    "G": { "item": "nerdkube:mecanismo_sombra_corrompido" },
+    "P": { "item": "oritech:super_ai_chip" }
+  },
+  "pattern": [
+    "EPE",
+    "PGP",
+    "EPE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nerdkube:nucleo_logico_infundido"
+  }
+}

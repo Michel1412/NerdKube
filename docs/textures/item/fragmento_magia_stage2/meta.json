@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:fragmento_magia_stage2",
+  "type": "item",
+  "display_name": "Pergaminho de Geometria Proibida",
+  "module": "magia",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/fragmento_magia_stage2.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/fragmento_magia_stage2.json",
+  "active_option": "a"
+}

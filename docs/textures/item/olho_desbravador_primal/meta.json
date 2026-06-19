@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:olho_desbravador_primal",
+  "type": "item",
+  "display_name": "Visor das Doze Dimensões",
+  "module": "exploration",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/olho_desbravador_primal.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/olho_desbravador_primal.json",
+  "active_option": "a"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:bolo_mistico_colocavel",
+  "type": "block",
+  "display_name": "Bolo Místico (bloco)",
+  "module": "agriculture",
+  "face_layout": "cube_all",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/block/bolo_mistico_colocavel.png",
+  "active_option": "a"
+}

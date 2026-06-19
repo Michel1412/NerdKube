@@ -1,0 +1,11 @@
+{
+  "id": "nerdkube:nucleo_de_materia",
+  "type": "item",
+  "display_name": "Núcleo de Matéria",
+  "module": "tech",
+  "pedestal": "north",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/nucleo_de_materia.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/nucleo_de_materia.json",
+  "active_option": "a"
+}

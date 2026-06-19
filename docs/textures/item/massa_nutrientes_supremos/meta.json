@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:massa_nutrientes_supremos",
+  "type": "item",
+  "display_name": "Banquete da Consagração",
+  "module": "agriculture",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/massa_nutrientes_supremos.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/massa_nutrientes_supremos.json",
+  "active_option": "a"
+}

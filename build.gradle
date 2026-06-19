@@ -1,0 +1,239 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.141'
+    id 'com.hypherionmc.modutils.modpublisher' version '2.1.6'
+    id 'idea'
+}
+
+tasks.named('wrapper', Wrapper).configure {
+    distributionType = Wrapper.DistributionType.BIN
+}
+
+version = findProperty('mod_version') ?: mod_version
+group = mod_group_id
+
+sourceSets.main.resources {
+    srcDir('src/generated/resources')
+    exclude("**/*.bbmodel")
+    exclude("src/generated/**/.cache")
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+base {
+    archivesName = mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
+
+    runs {
+        client {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        server {
+            server()
+            programArgument '--nogui'
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.INFO
+            jvmArgument '-Xmx8G'
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
+
+dependencies {
+    def modpackModsDir = file(modpack_mods_dir)
+
+    if (modpackModsDir.exists()) {
+        localRuntime fileTree(modpackModsDir) {
+            include '*.jar'
+            exclude 'nerdkube-*.jar'
+        }
+        logger.lifecycle("Modpack dev: ${modpackModsDir} (*.jar, exceto nerdkube)")
+    } else {
+        logger.warn("modpack_mods_dir não encontrado (${modpack_mods_dir}) — runClient sem mods do pack")
+    }
+
+    def endremFromLibs = file("libs/${endrem_jar_name}")
+    def endremFromPack = file("${modpack_mods_dir}/${endrem_jar_name}")
+    def endremJar = endremFromLibs.exists() ? endremFromLibs : endremFromPack
+
+    if (endremJar.exists()) {
+        compileOnly files(endremJar)
+        if (!modpackModsDir.exists()) {
+            localRuntime files(endremJar)
+        }
+        logger.lifecycle("End Remastered compileOnly: ${endremJar}")
+    } else {
+        logger.warn("End Remastered JAR não encontrado. Coloque em libs/ ou ajuste modpack_mods_dir em gradle.properties")
+    }
+
+    def jadeFromLibs = file("libs/${jade_jar_name}")
+    def jadeFromPack = file("${modpack_mods_dir}/${jade_jar_name}")
+    def jadeJar = jadeFromLibs.exists() ? jadeFromLibs : jadeFromPack
+
+    if (jadeJar.exists()) {
+        compileOnly files(jadeJar)
+        if (!modpackModsDir.exists()) {
+            localRuntime files(jadeJar)
+        }
+        logger.lifecycle("Jade compileOnly: ${jadeJar}")
+    } else {
+        logger.warn("Jade JAR não encontrado — plugin Waila/Jade não compilará até o JAR estar disponível")
+    }
+
+    def jeiFromLibs = file("libs/${jei_jar_name}")
+    def jeiFromPack = file("${modpack_mods_dir}/${jei_jar_name}")
+    def jeiJar = jeiFromLibs.exists() ? jeiFromLibs : jeiFromPack
+
+    if (jeiJar.exists()) {
+        compileOnly files(jeiJar)
+        if (!modpackModsDir.exists()) {
+            localRuntime files(jeiJar)
+        }
+        logger.lifecycle("JEI compileOnly: ${jeiJar}")
+    } else {
+        logger.warn("JEI JAR não encontrado — runClient sem JEI até o JAR estar em libs/ ou modpack_mods_dir")
+    }
+
+    def farmersDelightFromPack = file("${modpack_mods_dir}/${farmersdelight_jar_name}")
+    def farmersDelightFromLibs = file("libs/${farmersdelight_jar_name}")
+    def farmersDelightJar = farmersDelightFromLibs.exists() ? farmersDelightFromLibs : farmersDelightFromPack
+
+    if (farmersDelightJar.exists()) {
+        compileOnly files(farmersDelightJar)
+        logger.lifecycle("Farmer's Delight compileOnly: ${farmersDelightJar}")
+    } else {
+        logger.warn("Farmer's Delight JAR não encontrado — mixin da Cooking Pot não compilará")
+    }
+
+    def mekanismFromLibs = file("libs/${mekanism_jar_name}")
+    def mekanismFromPack = file("${modpack_mods_dir}/${mekanism_jar_name}")
+    def mekanismJar = mekanismFromLibs.exists() ? mekanismFromLibs : mekanismFromPack
+
+    def mekGenFromLibs = file("libs/${mekanism_generators_jar_name}")
+    def mekGenFromPack = file("${modpack_mods_dir}/${mekanism_generators_jar_name}")
+    def mekGenJar = mekGenFromLibs.exists() ? mekGenFromLibs : mekGenFromPack
+
+    if (mekanismJar.exists()) {
+        compileOnly files(mekanismJar)
+        logger.lifecycle("Mekanism compileOnly: ${mekanismJar}")
+    } else {
+        logger.warn("Mekanism JAR não encontrado — parse mek_data usará Recipe.CODEC genérico")
+    }
+
+    if (mekGenJar.exists()) {
+        compileOnly files(mekGenJar)
+        logger.lifecycle("Mekanism Generators compileOnly: ${mekGenJar}")
+    }
+
+    def oritechFromLibs = file("libs/${oritech_jar_name}")
+    def oritechFromPack = file("${modpack_mods_dir}/${oritech_jar_name}")
+    def oritechJar = oritechFromLibs.exists() ? oritechFromLibs : oritechFromPack
+
+    if (oritechJar.exists()) {
+        compileOnly files(oritechJar)
+        logger.lifecycle("Oritech compileOnly: ${oritechJar}")
+    } else {
+        logger.warn("Oritech JAR não encontrado — mixin do Laser Arm não compilará")
+    }
+
+    def jdtFromLibs = file("libs/${justdirethings_jar_name}")
+    def jdtFromPack = file("${modpack_mods_dir}/${justdirethings_jar_name}")
+    def jdtJar = jdtFromLibs.exists() ? jdtFromLibs : jdtFromPack
+
+    if (jdtJar.exists()) {
+        compileOnly files(jdtJar)
+        logger.lifecycle("Just Dire Things compileOnly: ${jdtJar}")
+    } else {
+        logger.warn("Just Dire Things JAR não encontrado — mixin BaseMachineBE não compilará")
+    }
+}
+
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from "src/main/templates"
+    into "build/generated/sources/modMetadata"
+}
+
+sourceSets.main.resources.srcDir generateModMetadata
+neoForge.ideSyncTask generateModMetadata
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}
+
+tasks.register('deployToModpack', Copy) {
+    dependsOn tasks.jar
+    description = 'Copia o JAR compilado para a pasta mods do modpack CurseForge'
+    group = 'nerdkube'
+    def deployDir = file(modpack_mods_dir)
+    def deployName = modpack_deploy_jar as String
+    def jarOut = tasks.named('jar', Jar).get().archiveFile
+    from(jarOut)
+    into(deployDir)
+    rename { deployName }
+    doLast {
+        logger.lifecycle("Deploy: ${jarOut.get().asFile} -> ${deployDir}/${deployName}")
+    }
+}
+
+publisher {
+    apiKeys {
+        curseforge System.getenv('CURSEFORGE_TOKEN')
+    }
+    curseID.set(System.getenv('CURSEFORGE_PROJECT_ID') ?: '')
+    setArtifact(tasks.jar)
+    setGameVersions(['1.21.1'])
+    setLoaders(['neoforge'])
+    setVersionType('release')
+    setChangelog(System.getenv('CHANGELOG') ?: "Release ${project.version}")
+    setDisplayName("${mod_name} ${project.version}")
+    setCurseEnvironment('both')
+}

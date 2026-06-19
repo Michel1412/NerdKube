@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:poeira_transmutacao_proibida",
+  "type": "item",
+  "display_name": "Poeira de Transmutação Proibida",
+  "module": "alchemy",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/poeira_transmutacao_proibida.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/poeira_transmutacao_proibida.json",
+  "active_option": "a"
+}

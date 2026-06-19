@@ -1,0 +1,17 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "br.com.nerdskube.mixin",
+  "plugin": "br.com.nerdskube.mixin.NerdKubeMixinPlugin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "oritech.LaserArmBlockEntityMixin",
+    "oritech.DestroyerBlockEntityMixin",
+    "justdirethings.BaseMachineBEMixin",
+    "recipe.RecipeManagerMixin",
+    "recipe.ClientRecipeSyncMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

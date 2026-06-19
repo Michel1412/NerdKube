@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:fragmento_magia_stage1",
+  "type": "item",
+  "display_name": "Runa de Sangue Inerente",
+  "module": "magia",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/fragmento_magia_stage1.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/fragmento_magia_stage1.json",
+  "active_option": "a"
+}

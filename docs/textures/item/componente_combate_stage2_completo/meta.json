@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:componente_combate_stage2_completo",
+  "type": "item",
+  "display_name": "Olho da Forja Ancestral",
+  "module": "exploration",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/componente_combate_stage2_completo.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/componente_combate_stage2_completo.json",
+  "active_option": "a"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:matriz_runica",
+  "type": "item",
+  "display_name": "Anel de Ancoragem Celestial",
+  "module": "magia",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/matriz_runica.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/matriz_runica.json",
+  "active_option": "a"
+}

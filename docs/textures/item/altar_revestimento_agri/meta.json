@@ -1,0 +1,10 @@
+{
+  "id": "nerdkube:altar_revestimento_agri",
+  "type": "item",
+  "display_name": "Módulo de Cozinha Imperial",
+  "module": "agriculture",
+  "resolution": 16,
+  "output_png": "src/main/resources/assets/nerdkube/textures/item/altar_revestimento_agri.png",
+  "model_json": "src/main/resources/assets/nerdkube/models/item/altar_revestimento_agri.json",
+  "active_option": "a"
+}

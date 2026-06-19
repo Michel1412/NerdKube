@@ -1,0 +1,10 @@
+{
+  "type": "productivebees:centrifuge",
+  "ingredient": { "item": "nerdkube:pacote_essencias_agri" },
+  "outputs": [
+    {
+      "item": { "item": "nerdkube:componente_agri_stage1_completo" },
+      "chance": 1.0
+    }
+  ]
+}
