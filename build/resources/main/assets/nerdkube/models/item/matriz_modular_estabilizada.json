@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "nerdkube:item/matriz_modular_estabilizada"
+  }
+}

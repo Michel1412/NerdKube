@@ -1,0 +1,19 @@
+{
+  "type": "mekanism:mek_data",
+  "category": "misc",
+  "key": {
+    "A": { "tag": "mekanism:alloys/infused" },
+    "C": { "tag": "c:circuits/basic" },
+    "E": { "item": "powah:battery_nitro" },
+    "O": { "tag": "c:ingots/osmium" }
+  },
+  "pattern": [
+    " O ",
+    "OAO",
+    "ECE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mekanismgenerators:wind_generator"
+  }
+}

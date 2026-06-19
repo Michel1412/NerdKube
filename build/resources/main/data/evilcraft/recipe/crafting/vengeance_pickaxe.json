@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SHS",
+    "HTH",
+    " T "
+  ],
+  "key": {
+    "S": { "item": "evilcraft:hardened_blood_shard" },
+    "H": { "item": "malum:hallowed_gold_ingot" },
+    "T": { "item": "evilcraft:dark_stick" }
+  },
+  "result": {
+    "id": "evilcraft:vengeance_pickaxe",
+    "components": {
+      "minecraft:enchantments": {
+        "levels": {
+          "minecraft:fortune": 5,
+          "evilcraft:vengeance": 3
+        },
+        "show_in_tooltip": true
+      }
+    }
+  }
+}

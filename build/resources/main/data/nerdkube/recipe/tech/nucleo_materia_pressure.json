@@ -1,0 +1,14 @@
+{
+  "type": "pneumaticcraft:pressure_chamber",
+  "inputs": [
+    { "count": 2, "item": "nerdkube:singularidade_hipercarregada" },
+    { "count": 1, "item": "nerdkube:chassi_cyber_flux" },
+    { "count": 3, "item": "nerdkube:processador_antimateria_insana" },
+    { "count": 3, "item": "nerdkube:matriz_modular_estabilizada" },
+    { "count": 1, "item": "oritech:overcharged_crystal" }
+  ],
+  "pressure": 16.0,
+  "results": [
+    { "count": 1, "id": "nerdkube:nucleo_de_materia" }
+  ]
+}

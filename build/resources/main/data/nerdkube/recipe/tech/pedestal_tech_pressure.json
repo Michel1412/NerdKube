@@ -1,0 +1,16 @@
+{
+  "type": "pneumaticcraft:pressure_chamber",
+  "inputs": [
+    { "count": 2, "item": "mekanism:pellet_antimatter" },
+    { "count": 1, "item": "oritech:machine_core_7" },
+    { "count": 2, "item": "oritech:prometheum_ingot" },
+    { "count": 4, "item": "pneumaticcraft:plastic_brick_light_gray" },
+    { "count": 1, "item": "mekmm:uu_matter" },
+    { "count": 1, "item": "actuallyadditions:firework_box" },
+    { "count": 4, "item": "actuallyadditions:empowered_palis_crystal_block" }
+  ],
+  "pressure": 16.0,
+  "results": [
+    { "count": 1, "id": "nerdkube:pedestal_tech" }
+  ]
+}

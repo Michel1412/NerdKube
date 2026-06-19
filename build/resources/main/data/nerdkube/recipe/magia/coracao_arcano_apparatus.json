@@ -1,0 +1,22 @@
+{
+  "type": "ars_nouveau:enchanting_apparatus",
+  "keepNbtOfReagent": false,
+  "reagent": {
+    "item": "nerdkube:matriz_runica"
+  },
+  "pedestalItems": [
+    { "item": "nerdkube:essencia_vital_instavel" },
+    { "item": "nerdkube:essencia_vital_instavel" },
+    { "item": "occultism:miner_marid_master" },
+    { "item": "nerdkube:componente_magia_stage1_completo" },
+    { "item": "nerdkube:componente_magia_stage1_completo" },
+    { "item": "nerdkube:componente_magia_stage1_completo" },
+    { "item": "nerdkube:componente_magia_stage2_completo" },
+    { "item": "nerdkube:componente_magia_stage2_completo" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "nerdkube:coracao_arcano"
+  },
+  "sourceCost": 50000
+}

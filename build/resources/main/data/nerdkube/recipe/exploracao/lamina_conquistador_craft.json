@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": { "item": "alexsmobs:sculk_boomer" },
+    "G": { "item": "simplyswords:netherfused_gem" },
+    "U": { "tag": "simplyswords:uniques" }
+  },
+  "pattern": [
+    "GBG",
+    "BUB",
+    "GBG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nerdkube:lamina_conquistador"
+  }
+}

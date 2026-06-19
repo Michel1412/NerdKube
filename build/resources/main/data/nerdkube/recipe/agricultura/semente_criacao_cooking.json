@@ -1,0 +1,18 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 600,
+  "experience": 5.0,
+  "ingredients": [
+    { "item": "nerdkube:altar_revestimento_agri" },
+    { "item": "nerdkube:massa_nutrientes_supremos" },
+    { "item": "nerdkube:massa_nutrientes_supremos" },
+    { "item": "nerdkube:componente_agri_stage1_completo" },
+    { "item": "nerdkube:componente_agri_stage1_completo" },
+    { "item": "nerdkube:raizes_ancestrais_em_conserva" }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "nerdkube:semente_criacao"
+  }
+}

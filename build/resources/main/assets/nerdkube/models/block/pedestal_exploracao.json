@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "nerdkube:block/pedestal_exploracao_top",
+    "side": "nerdkube:block/pedestal_exploracao_side",
+    "bottom": "nerdkube:block/pedestal_exploracao_side"
+  }
+}

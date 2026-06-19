@@ -1,0 +1,10 @@
+{
+  "type": "malum:void_favor",
+  "input": {
+    "item": "nerdkube:oferta_poco_sombria"
+  },
+  "result": {
+    "count": 1,
+    "id": "nerdkube:componente_magia_stage1_completo"
+  }
+}
