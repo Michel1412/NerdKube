@@ -25,6 +25,9 @@ bin/
 ### Mac OS ###
 .DS_Store
 
+### Gradle wrapper (manter no repo — CI usa ./gradlew no Linux) ###
+# Não ignorar: gradlew, gradlew.bat, gradle/wrapper/
+
 ### Minecraft Modding ###
 run/
 runClient/
