@@ -228,12 +228,19 @@ publisher {
     apiKeys {
         curseforge System.getenv('CURSEFORGE_TOKEN')
     }
-    curseID.set(System.getenv('CURSEFORGE_PROJECT_ID') ?: '')
+
+    def curseProjectId = System.getenv('CURSEFORGE_PROJECT_ID')?.trim()
+    if (curseProjectId) {
+        setCurseID(curseProjectId)
+    }
+
     setArtifact(tasks.jar)
+    setProjectVersion("${project.version}")
     setGameVersions(['1.21.1'])
     setLoaders(['neoforge'])
     setVersionType('release')
     setChangelog(System.getenv('CHANGELOG') ?: "Release ${project.version}")
     setDisplayName("${mod_name} ${project.version}")
     setCurseEnvironment('both')
+    setJavaVersions(org.gradle.api.JavaVersion.VERSION_21, 21)
 }

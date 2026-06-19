@@ -41,11 +41,31 @@ jobs:
           fi
 
       - name: Build
-        run: chmod +x gradlew && ./gradlew build -Pmod_version=${{ steps.version.outputs.mod_version }}
+        run: chmod +x gradlew && ./gradlew --no-configuration-cache build -Pmod_version=${{ steps.version.outputs.mod_version }}
+
+      - name: Validate CurseForge secrets and project
+        env:
+          CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
+          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+        run: |
+          if [ -z "$CURSEFORGE_TOKEN" ] || [ -z "$CURSEFORGE_PROJECT_ID" ]; then
+            echo "::error::Defina CURSEFORGE_TOKEN e CURSEFORGE_PROJECT_ID em Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          HTTP=$(curl -sS -o /tmp/cf-project.json -w "%{http_code}" \
+            -H "x-api-key: $CURSEFORGE_TOKEN" \
+            "https://api.curseforge.com/v1/mods/$CURSEFORGE_PROJECT_ID")
+          echo "CurseForge project lookup: HTTP $HTTP"
+          if [ "$HTTP" != "200" ]; then
+            cat /tmp/cf-project.json
+            echo "::error::Token ou PROJECT_ID invalido. O ID e numerico (barra lateral do projeto na CurseForge)."
+            exit 1
+          fi
+          jq -r '"Projeto: \(.data.name) (\(.data.slug))"' /tmp/cf-project.json
 
       - name: Publish to CurseForge
         env:
           CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          CHANGELOG: "Release ${{ github.ref_name }} — see repository tags and docs/MANIFESTO.md for progression details."
-        run: ./gradlew publishCurseforge -Pmod_version=${{ steps.version.outputs.mod_version }}
+          CHANGELOG: "Release ${{ steps.version.outputs.mod_version }} - see docs/MANIFESTO.md for progression details."
+        run: ./gradlew --no-configuration-cache publishCurseforge --stacktrace -Pmod_version=${{ steps.version.outputs.mod_version }}
