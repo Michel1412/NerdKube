@@ -244,3 +244,9 @@ publisher {
     setCurseEnvironment('both')
     setJavaVersions(org.gradle.api.JavaVersion.VERSION_21, 21)
 }
+
+['publishCurseforge', 'publishMod', 'publishModrinth', 'publishGitHub'].each { taskName ->
+    tasks.named(taskName).configure {
+        notCompatibleWithConfigurationCache('ModPublisher nao suporta configuration cache')
+    }
+}
