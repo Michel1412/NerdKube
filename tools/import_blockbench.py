@@ -110,9 +110,10 @@ def fix_blockbench_model(model: dict, name: str, category: str) -> tuple[dict, l
         )
         if has_primary:
             primary = f"{MOD_ID}:{category}/{name}"
-            if cleaned["textures"].get("0") != primary and "layer0" not in cleaned["textures"]:
-                cleaned["textures"].setdefault("0", primary)
-            cleaned["textures"].setdefault("particle", primary)
+            cleaned["textures"]["0"] = primary
+            if "particle" in cleaned["textures"] and not str(cleaned["textures"]["particle"]).startswith("#"):
+                cleaned["textures"]["particle"] = primary
+            cleaned["textures"].setdefault("layer0", primary)
 
     return cleaned, warnings
 

@@ -9,7 +9,7 @@ on:
       mod_version:
         description: 'Versão do mod (ex.: 0.6.0)'
         required: true
-        default: '0.6.0'
+        default: '0.6.2'
 
 permissions:
   contents: read

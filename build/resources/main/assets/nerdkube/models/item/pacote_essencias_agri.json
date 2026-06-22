@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "nerdkube:item/pacote_essencias_agri"
-  }
-}

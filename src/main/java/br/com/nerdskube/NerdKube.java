@@ -7,8 +7,10 @@ import com.mojang.logging.LogUtils;
 import br.com.nerdskube.attachment.ModAttachments;
 import br.com.nerdskube.component.ModDataComponents;
 import br.com.nerdskube.config.NerdKubeConfig;
+import br.com.nerdskube.config.NerdKubeServerConfig;
 import br.com.nerdskube.registry.ModLootModifiers;
 import br.com.nerdskube.integration.EndRemIntegration;
+import br.com.nerdskube.integration.ftbchunks.FtbChunksIntegration;
 import br.com.nerdskube.integration.fakeplayer.FakePlayerIntegration;
 import br.com.nerdskube.registry.ModBlockEntities;
 import br.com.nerdskube.registry.ModBlocks;
@@ -31,6 +33,7 @@ public class NerdKube {
 
     public NerdKube(IEventBus modEventBus, ModContainer modContainer) {
         modContainer.registerConfig(ModConfig.Type.COMMON, NerdKubeConfig.SPEC);
+        modContainer.registerConfig(ModConfig.Type.SERVER, NerdKubeServerConfig.SPEC);
 
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
@@ -54,6 +57,7 @@ public class NerdKube {
             }
 
             FakePlayerIntegration.init();
+            FtbChunksIntegration.init();
         });
     }
 

@@ -19,6 +19,11 @@ public final class ModAttachments {
                     .copyOnDeath()
                     .build());
 
+    /** Runtime-only: jogador sintético de laser/destroyer/clicker (não persiste). */
+    public static final Supplier<AttachmentType<Boolean>> AUTOMATION_PLAYER = ATTACHMENT_TYPES.register(
+            "automation_player",
+            () -> AttachmentType.builder(() -> false).build());
+
     private ModAttachments() {}
 
     public static boolean hasCraftedTrophy(Player player) {

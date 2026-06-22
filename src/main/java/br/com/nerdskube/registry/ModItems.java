@@ -71,8 +71,6 @@ public final class ModItems {
             () -> new BlockItem(ModBlocks.PEDESTAL_BRUTO.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> MASSA_RUNICA_CRUA = ITEMS.register("massa_runica_crua",
             () -> new BlockItem(ModBlocks.MASSA_RUNICA_CRUA.get(), new Item.Properties()));
-    public static final DeferredItem<BlockItem> AGRI_CORE_CROP = ITEMS.register("agri_core_crop",
-            () -> new BlockItem(ModBlocks.AGRI_CORE_CROP.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> NERD_CUBE = ITEMS.register("nerd_cube",
             () -> new BlockItem(ModBlocks.NERD_CUBE.get(), new Item.Properties()) {
                 @Override

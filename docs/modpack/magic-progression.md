@@ -5,7 +5,7 @@ Referência canônica da cadeia Expert do pedestal de magia (sul) e do amuleto `
 ## O que mudou na 0.4.0
 
 - Removido `fragmento_magia_stage1` (Runa de Sangue Inerente)
-- `oferta_poco_sombria` (Oferenda ao Abismo) — **sem receita**; obtenção descrita no JEI (R)
+- `oferta_poco_sombria` (Oferenda ao Abismo) — craft shapeless (Mesa de Transmutação + relâmpagos)
 - 5 itens intermediários da linha magia (lore em `ProgressionLoreItem`)
 
 ## Fluxo resumido
@@ -13,7 +13,7 @@ Referência canônica da cadeia Expert do pedestal de magia (sul) e do amuleto `
 ```
 Pedestal Magia (Occultism Ritual craft_afrit)
     ↓
-Oferenda ao Abismo (sem receita — misture relâmpagos no Tablet de uma criatura misteriosa)
+Oferenda ao Abismo (craft shapeless — alexsmobs:transmutation_table + lightning_rod + mysterious_worm)
     ↓
 Coração Sombrio Purificado (lançar oferenda num buraco sem fundo visível)
     ↓
@@ -32,7 +32,7 @@ Coração Arcano (Ars Nouveau Enchanting Apparatus)
 | Etapa | Arquivo | Máquina | Saída |
 |-------|---------|---------|-------|
 | A | `pedestal_magia_ritual.json` | Occultism Ritual (`craft_afrit`) | `pedestal_magia` |
-| B | — | Sem receita (JEI Ingredient Info) | `oferta_poco_sombria` |
+| B | `magia/oferta_poco_sombria_craft.json` | Bancada shapeless | `oferta_poco_sombria` |
 | C | `componente_magia_stage1_void_favor.json` | Poço sem fundo (`malum:void_favor`) | `componente_magia_stage1_completo` |
 | D | `fragmento_magia_stage2_craft.json` | Bancada 3×3 | `fragmento_magia_stage2` |
 | E | `componente_magia_stage2_spirit_infusion.json` | Malum Spirit Altar | `componente_magia_stage2_completo` |

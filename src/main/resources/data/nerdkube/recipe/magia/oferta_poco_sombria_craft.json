@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    { "item": "alexsmobs:transmutation_table" },
+    { "item": "minecraft:lightning_rod" },
+    { "item": "alexsmobs:mysterious_worm" },
+    { "item": "evilcraft:dark_gem" },
+    { "item": "malum:twisted_rock" }
+  ],
+  "result": {
+    "count": 1,
+    "id": "nerdkube:oferta_poco_sombria"
+  }
+}

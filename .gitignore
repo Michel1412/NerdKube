@@ -40,5 +40,12 @@ repo/
 !**/src/**/repo/
 libs/*.jar
 
+### Scratch local (JARs extraídos/decompilados para consulta de mixins) ###
+.tmp_*/
+
+### Gradle / NeoForge build output ###
+build/
+.gradle/
+
 ### Eclipse / bin (extra) ###
 .bin/

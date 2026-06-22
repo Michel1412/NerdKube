@@ -9,12 +9,15 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArgs;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
 import com.mojang.authlib.GameProfile;
 
+import br.com.nerdskube.integration.fakeplayer.AutomationPlayerMark;
 import br.com.nerdskube.integration.fakeplayer.FakePlayerOwnerAccess;
 import br.com.nerdskube.integration.fakeplayer.FakePlayerOwnerHelper;
+import br.com.nerdskube.integration.fakeplayer.FakePlayerProgressionGuard;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -120,6 +123,22 @@ public abstract class LaserArmBlockEntityMixin implements FakePlayerOwnerAccess 
         if (profile != null) {
             args.set(0, profile.getId());
             args.set(1, profile.getName());
+        }
+    }
+
+    @Inject(method = "getLaserPlayerEntity", at = @At("RETURN"))
+    private void nerdkube$markLaserAutomationPlayer(CallbackInfoReturnable<Player> cir) {
+        AutomationPlayerMark.mark(cir.getReturnValue());
+    }
+
+    /**
+     * O laser não deve quebrar blocos de progressão NerdKube nem mesas de ritual externas.
+     * Independente do UUID do dono — o mixin de ownership existe só para claims (FTB Chunks).
+     */
+    @Inject(method = "finishBlockBreaking", at = @At("HEAD"), cancellable = true)
+    private void nerdkube$blockProgressionHarvest(BlockPos pos, BlockState state, CallbackInfo ci) {
+        if (FakePlayerProgressionGuard.isProtectedInteractionBlock(state.getBlock())) {
+            ci.cancel();
         }
     }
 

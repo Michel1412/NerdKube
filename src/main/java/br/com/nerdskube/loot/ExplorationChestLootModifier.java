@@ -1,5 +1,6 @@
 package br.com.nerdskube.loot;
 
+import br.com.nerdskube.config.NerdKubeServerConfigAccess;
 import br.com.nerdskube.registry.ModItems;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -18,7 +19,6 @@ import net.neoforged.neoforge.common.loot.LootModifier;
 import org.jetbrains.annotations.NotNull;
 
 public class ExplorationChestLootModifier extends LootModifier {
-    private static final float CHANCE = 0.015F;
     private static final TagKey<Item> ARTIFACTS =
             TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("artifacts", "artifacts"));
 
@@ -42,11 +42,11 @@ public class ExplorationChestLootModifier extends LootModifier {
         }
 
         Player player = resolvePlayer(context);
-        if (player == null || countArtifacts(player) < 3) {
+        if (player == null || countArtifacts(player) < NerdKubeServerConfigAccess.explorationLootMinArtifacts()) {
             return generatedLoot;
         }
 
-        if (context.getRandom().nextFloat() >= CHANCE) {
+        if (context.getRandom().nextFloat() >= NerdKubeServerConfigAccess.explorationLootChance()) {
             return generatedLoot;
         }
 

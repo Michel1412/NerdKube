@@ -9,12 +9,15 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArgs;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
 import com.mojang.authlib.GameProfile;
 
+import br.com.nerdskube.integration.fakeplayer.AutomationPlayerMark;
 import br.com.nerdskube.integration.fakeplayer.FakePlayerOwnerAccess;
 import br.com.nerdskube.integration.fakeplayer.FakePlayerOwnerHelper;
+import br.com.nerdskube.integration.fakeplayer.FakePlayerProgressionGuard;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
@@ -112,6 +115,23 @@ public abstract class DestroyerBlockEntityMixin implements FakePlayerOwnerAccess
         if (profile != null) {
             args.set(0, profile.getId());
             args.set(1, profile.getName());
+        }
+    }
+
+    @Inject(method = "getDestroyerPlayerEntity", at = @At("RETURN"))
+    private void nerdkube$markDestroyerAutomationPlayer(CallbackInfoReturnable<Player> cir) {
+        AutomationPlayerMark.mark(cir.getReturnValue());
+    }
+
+    @Inject(method = "finishBlockWork", at = @At("HEAD"), cancellable = true)
+    private void nerdkube$blockProgressionHarvest(BlockPos pos, CallbackInfo ci) {
+        Level level = ((BlockEntity) (Object) this).getLevel();
+        if (level == null) {
+            return;
+        }
+        BlockState state = level.getBlockState(pos);
+        if (FakePlayerProgressionGuard.isProtectedInteractionBlock(state.getBlock())) {
+            ci.cancel();
         }
     }
 

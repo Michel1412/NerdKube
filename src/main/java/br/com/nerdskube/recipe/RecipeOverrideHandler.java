@@ -1,6 +1,7 @@
 package br.com.nerdskube.recipe;
 
 import br.com.nerdskube.NerdKube;
+import br.com.nerdskube.config.NerdKubeServerConfigAccess;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -50,11 +51,17 @@ public final class RecipeOverrideHandler {
     private static final ResourceLocation VENGEANCE_PICKAXE_ITEM =
             ResourceLocation.fromNamespaceAndPath("evilcraft", "vengeance_pickaxe");
 
+    private static final ResourceLocation ENERGY_TABLET =
+            ResourceLocation.fromNamespaceAndPath("mekanism", "energy_tablet");
+    private static final ResourceLocation DIAMOND =
+            ResourceLocation.fromNamespaceAndPath("minecraft", "diamond");
+
     private record OverrideSpec(
             ResourceLocation id,
             ResourceLocation outputItem,
             String resourcePath,
             String verifyHint,
+            ResourceLocation replacedIngredient,
             List<ResourceLocation> alternateIds,
             Predicate<Recipe<?>> vanillaMatcher) {}
 
@@ -64,6 +71,7 @@ public final class RecipeOverrideHandler {
                     ResourceLocation.fromNamespaceAndPath("mekanismgenerators", "wind_generator"),
                     "data/mekanismgenerators/recipe/generator/wind.json",
                     "powah:battery_nitro",
+                    ENERGY_TABLET,
                     List.of(),
                     RecipeOverrideHandler::usesEnergyTablet),
             new OverrideSpec(
@@ -71,6 +79,7 @@ public final class RecipeOverrideHandler {
                     ATOMIC_DISASSEMBLER_ITEM,
                     "data/mekanism/recipe/atomic_disassembler.json",
                     "mekanism:ultimate_induction_cell",
+                    ENERGY_TABLET,
                     List.of(),
                     RecipeOverrideHandler::usesEnergyTablet),
             new OverrideSpec(
@@ -78,6 +87,7 @@ public final class RecipeOverrideHandler {
                     VENGEANCE_PICKAXE_ITEM,
                     "data/evilcraft/recipe/crafting/vengeance_pickaxe.json",
                     "malum:hallowed_gold_ingot",
+                    DIAMOND,
                     List.of(VENGEANCE_PICKAXE_ALT_ID),
                     RecipeOverrideHandler::usesDiamondGem)
     );
@@ -85,7 +95,13 @@ public final class RecipeOverrideHandler {
     private RecipeOverrideHandler() {}
 
     public static void apply(RecipeManager manager, HolderLookup.Provider registries) {
+        if (!NerdKubeServerConfigAccess.recipeOverridesEnabled()) {
+            return;
+        }
         if (Boolean.TRUE.equals(APPLYING.get())) {
+            return;
+        }
+        if (isAlreadyApplied(manager, registries)) {
             return;
         }
         APPLYING.set(true);
@@ -94,6 +110,23 @@ public final class RecipeOverrideHandler {
         } finally {
             APPLYING.set(false);
         }
+    }
+
+    private static boolean isAlreadyApplied(RecipeManager manager, HolderLookup.Provider registries) {
+        for (OverrideSpec spec : OVERRIDES) {
+            Optional<RecipeHolder<?>> existing = manager.byKey(spec.id());
+            if (existing.isEmpty()) {
+                return false;
+            }
+            if (!recipeContainsHint(existing.get().value(), spec.verifyHint())) {
+                return false;
+            }
+            if (manager.getRecipes().stream().anyMatch(holder -> shouldRemove(holder, spec, registries)
+                    && !holder.id().equals(spec.id()))) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private static void applyInternal(RecipeManager manager, HolderLookup.Provider registries) {
@@ -114,12 +147,20 @@ public final class RecipeOverrideHandler {
             }
             recipes.add(override.get());
             replaced++;
+
+            NerdKube.LOGGER.info(
+                    "NerdKube: override {} -> {} (substituiu {} receita(s) vanilla)",
+                    spec.replacedIngredient(),
+                    spec.verifyHint(),
+                    removed);
         }
 
         if (replaced > 0) {
             manager.replaceRecipes(recipes);
             NerdKube.LOGGER.info("NerdKube: {} receita(s) de override aplicada(s).", replaced);
-            verifyOverrides(manager, registries);
+            if (NerdKubeServerConfigAccess.recipeOverridesVerboseLog()) {
+                verifyOverrides(manager, registries);
+            }
         }
     }
 
@@ -156,14 +197,13 @@ public final class RecipeOverrideHandler {
     }
 
     private static boolean ingredientHasEnergyTablet(Ingredient ingredient) {
-        ResourceLocation tablet = ResourceLocation.fromNamespaceAndPath("mekanism", "energy_tablet");
         return ingredient.getItems().length > 0
                 && Arrays.stream(ingredient.getItems())
-                .anyMatch(stack -> BuiltInRegistries.ITEM.getKey(stack.getItem()).equals(tablet));
+                .anyMatch(stack -> BuiltInRegistries.ITEM.getKey(stack.getItem()).equals(ENERGY_TABLET));
     }
 
     private static boolean ingredientHasDiamond(Ingredient ingredient) {
-        Item diamond = BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("minecraft", "diamond"));
+        Item diamond = BuiltInRegistries.ITEM.get(DIAMOND);
         return ingredient.test(new ItemStack(diamond));
     }
 

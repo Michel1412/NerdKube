@@ -5,11 +5,11 @@
   "plugin": "br.com.nerdskube.mixin.NerdKubeMixinPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "command.CommandDispatcherMixin",
     "oritech.LaserArmBlockEntityMixin",
     "oritech.DestroyerBlockEntityMixin",
     "justdirethings.BaseMachineBEMixin",
-    "recipe.RecipeManagerMixin",
-    "recipe.ClientRecipeSyncMixin"
+    "recipe.RecipeManagerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

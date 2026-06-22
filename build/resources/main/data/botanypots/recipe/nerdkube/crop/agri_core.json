@@ -1,7 +1,0 @@
-{
-  "type": "botanypots:block_derived_crop",
-  "block": "nerdkube:agri_core_crop",
-  "input": { "item": "nerdkube:runic_crystal_cake" },
-  "soil": { "item": "mysticalagriculture:supremium_farmland" },
-  "grow_time": 12000
-}

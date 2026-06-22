@@ -1,6 +1,7 @@
 package br.com.nerdskube.integration.agriculture;
 
 import br.com.nerdskube.NerdKube;
+import br.com.nerdskube.integration.fakeplayer.FakePlayerProgressionGuard;
 import br.com.nerdskube.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -55,6 +56,10 @@ public final class BakerStationDoughHandler {
         }
 
         Player player = event.getEntity();
+        if (FakePlayerProgressionGuard.isAutomationPlayer(player)) {
+            return;
+        }
+
         level.setBlock(above, ModBlocks.MASSA_RUNICA_CRUA.get().defaultBlockState(), Block.UPDATE_ALL);
         level.playSound(null, above, SoundEvents.SLIME_BLOCK_PLACE, SoundSource.BLOCKS, 0.9F, 1.0F);
         level.levelEvent(2001, above, Block.getId(ModBlocks.MASSA_RUNICA_CRUA.get().defaultBlockState()));

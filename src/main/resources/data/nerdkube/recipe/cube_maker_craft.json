@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": { "item": "nerdkube:pedestal_tech" },
+    "M": { "item": "nerdkube:pedestal_magia" },
+    "E": { "item": "nerdkube:pedestal_exploracao" },
+    "A": { "item": "nerdkube:pedestal_agricultura" },
+    "C": { "item": "minecraft:crafter" },
+    "N": { "item": "minecraft:nether_star" },
+    "O": { "item": "minecraft:crying_obsidian" }
+  },
+  "pattern": [
+    "TME",
+    "OCO",
+    "ANA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nerdkube:cube_maker"
+  }
+}

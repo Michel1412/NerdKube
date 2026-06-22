@@ -92,10 +92,11 @@ public final class ModBlocks {
 
     public static final DeferredBlock<EternalCubeBlock> ETERNAL_CUBE = BLOCKS.register("eternal_cube",
             () -> new EternalCubeBlock(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_BLACK)
+                    .mapColor(MapColor.COLOR_PURPLE)
                     .strength(-1.0F, 3600000.0F)
-                    .sound(SoundType.METAL)
-                    .lightLevel(state -> 4)));
+                    .sound(SoundType.AMETHYST)
+                    .lightLevel(state -> 15)
+                    .noOcclusion()));
 
     private ModBlocks() {}
 }

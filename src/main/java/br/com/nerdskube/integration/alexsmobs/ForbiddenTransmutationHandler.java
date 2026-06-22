@@ -1,6 +1,8 @@
 package br.com.nerdskube.integration.alexsmobs;
 
+import br.com.nerdskube.config.NerdKubeServerConfigAccess;
 import br.com.nerdskube.NerdKube;
+import br.com.nerdskube.integration.fakeplayer.FakePlayerProgressionGuard;
 import br.com.nerdskube.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -32,8 +34,6 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 public final class ForbiddenTransmutationHandler {
     private static final ResourceLocation TRANSMUTATION_TABLE =
             ResourceLocation.fromNamespaceAndPath("alexsmobs", "transmutation_table");
-    private static final int XP_LEVEL_COST = 30;
-    private static final float SUCCESS_CHANCE = 0.02F;
 
     private ForbiddenTransmutationHandler() {}
 
@@ -44,6 +44,9 @@ public final class ForbiddenTransmutationHandler {
         }
 
         Player player = event.getEntity();
+        if (FakePlayerProgressionGuard.isAutomationPlayer(player)) {
+            return;
+        }
         if (!player.isShiftKeyDown()) {
             return;
         }
@@ -60,8 +63,9 @@ public final class ForbiddenTransmutationHandler {
 
         event.setCanceled(true);
 
-        if (player.experienceLevel < XP_LEVEL_COST) {
-            player.displayClientMessage(Component.translatable("nerdkube.transmutation.insufficient_xp", XP_LEVEL_COST), true);
+        int xpCost = NerdKubeServerConfigAccess.transmutationXpLevelCost();
+        if (player.experienceLevel < xpCost) {
+            player.displayClientMessage(Component.translatable("nerdkube.transmutation.insufficient_xp", xpCost), true);
             return;
         }
 
@@ -73,10 +77,10 @@ public final class ForbiddenTransmutationHandler {
         ServerLevel serverLevel = (ServerLevel) level;
         BlockPos pos = event.getPos();
 
-        player.giveExperienceLevels(-XP_LEVEL_COST);
+        player.giveExperienceLevels(-xpCost);
         held.shrink(1);
 
-        if (serverLevel.random.nextFloat() <= SUCCESS_CHANCE) {
+        if (serverLevel.random.nextFloat() <= NerdKubeServerConfigAccess.transmutationSuccessChance()) {
             ItemStack reward = new ItemStack(ModItems.POEIRA_TRANSMUTACAO_PROIBIDA.get());
             ItemEntity drop = new ItemEntity(
                     serverLevel,

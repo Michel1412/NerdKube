@@ -176,6 +176,39 @@ dependencies {
     } else {
         logger.warn("Just Dire Things JAR não encontrado — mixin BaseMachineBE não compilará")
     }
+
+    def ftbChunksFromLibs = file("libs/${ftb_chunks_jar_name}")
+    def ftbChunksFromPack = file("${modpack_mods_dir}/${ftb_chunks_jar_name}")
+    def ftbChunksJar = ftbChunksFromLibs.exists() ? ftbChunksFromLibs : ftbChunksFromPack
+
+    def ftbLibraryFromLibs = file("libs/${ftb_library_jar_name}")
+    def ftbLibraryFromPack = file("${modpack_mods_dir}/${ftb_library_jar_name}")
+    def ftbLibraryJar = ftbLibraryFromLibs.exists() ? ftbLibraryFromLibs : ftbLibraryFromPack
+
+    if (ftbLibraryJar.exists()) {
+        compileOnly files(ftbLibraryJar)
+        logger.lifecycle("FTB Library compileOnly: ${ftbLibraryJar}")
+    } else {
+        logger.warn("FTB Library JAR não encontrado — integração FTB Chunks não compilará")
+    }
+
+    if (ftbChunksJar.exists()) {
+        compileOnly files(ftbChunksJar)
+        logger.lifecycle("FTB Chunks compileOnly: ${ftbChunksJar}")
+    } else {
+        logger.warn("FTB Chunks JAR não encontrado — trava de chunk para FakePlayers não compilará")
+    }
+
+    def architecturyFromLibs = file("libs/${architectury_jar_name}")
+    def architecturyFromPack = file("${modpack_mods_dir}/${architectury_jar_name}")
+    def architecturyJar = architecturyFromLibs.exists() ? architecturyFromLibs : architecturyFromPack
+
+    if (architecturyJar.exists()) {
+        compileOnly files(architecturyJar)
+        logger.lifecycle("Architectury API compileOnly: ${architecturyJar}")
+    } else {
+        logger.warn("Architectury JAR não encontrado — invalidação de cache FTB Chunks não compilará")
+    }
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {

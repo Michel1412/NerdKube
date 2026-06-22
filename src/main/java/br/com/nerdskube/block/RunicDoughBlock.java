@@ -1,5 +1,6 @@
 package br.com.nerdskube.block;
 
+import br.com.nerdskube.integration.fakeplayer.FakePlayerProgressionGuard;
 import br.com.nerdskube.registry.ModBlocks;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -62,6 +63,9 @@ public class RunicDoughBlock extends Block {
             BlockHitResult hit) {
         if (level.isClientSide() || hand != InteractionHand.MAIN_HAND) {
             return ItemInteractionResult.SUCCESS;
+        }
+        if (FakePlayerProgressionGuard.isAutomationPlayer(player)) {
+            return ItemInteractionResult.FAIL;
         }
         if (!stack.is(BuiltInRegistries.ITEM.get(MASTER_INFUSION_CRYSTAL))) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;

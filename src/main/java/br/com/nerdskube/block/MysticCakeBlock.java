@@ -1,5 +1,6 @@
 package br.com.nerdskube.block;
 
+import br.com.nerdskube.integration.fakeplayer.FakePlayerProgressionGuard;
 import br.com.nerdskube.registry.ModItems;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -53,6 +54,9 @@ public class MysticCakeBlock extends Block {
         if (level.isClientSide()) {
             return InteractionResult.SUCCESS;
         }
+        if (FakePlayerProgressionGuard.isAutomationPlayer(player)) {
+            return InteractionResult.FAIL;
+        }
         doHarvest(level, pos, player);
         return InteractionResult.SUCCESS;
     }
@@ -68,6 +72,9 @@ public class MysticCakeBlock extends Block {
             BlockHitResult hit) {
         if (level.isClientSide() || hand != InteractionHand.MAIN_HAND || !stack.isEmpty()) {
             return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
+        }
+        if (FakePlayerProgressionGuard.isAutomationPlayer(player)) {
+            return ItemInteractionResult.FAIL;
         }
         doHarvest(level, pos, player);
         return ItemInteractionResult.SUCCESS;

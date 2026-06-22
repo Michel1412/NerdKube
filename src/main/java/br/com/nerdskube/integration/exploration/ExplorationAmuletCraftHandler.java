@@ -1,6 +1,7 @@
 package br.com.nerdskube.integration.exploration;
 
 import br.com.nerdskube.NerdKube;
+import br.com.nerdskube.integration.fakeplayer.FakePlayerProgressionGuard;
 import br.com.nerdskube.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -40,6 +41,10 @@ public final class ExplorationAmuletCraftHandler {
         }
 
         Player player = event.getEntity();
+        if (FakePlayerProgressionGuard.isAutomationPlayer(player)) {
+            return;
+        }
+
         ItemStack held = player.getItemInHand(InteractionHand.MAIN_HAND);
         if (!held.is(ModItems.OLHO_DESBRAVADOR_PRIMAL.get())) {
             return;

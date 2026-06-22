@@ -16,13 +16,13 @@ public final class FakePlayerIntegration {
                 .filter(e -> ModList.get().isLoaded(e.modId()))
                 .count();
 
-        if (managed == 0 && nativeSupport == 0) {
-            return;
+        if (managed > 0 || nativeSupport > 0) {
+            NerdKube.LOGGER.info(
+                    "FakePlayer ownership — {} bloco(s) gerenciado(s), {} com suporte nativo do mod.",
+                    managed,
+                    nativeSupport);
         }
 
-        NerdKube.LOGGER.info(
-                "FakePlayer ownership — {} bloco(s) gerenciado(s), {} com suporte nativo do mod.",
-                managed,
-                nativeSupport);
+        NerdKube.LOGGER.info("FakePlayer progression guard ativo — lasers e automações bloqueados em rituais manuais.");
     }
 }

@@ -24,7 +24,7 @@ Optional integrations: Alex's Mobs (Forbidden Transmutation Dust), Jade, JEI, Fa
 | East | `pedestal_exploracao` | `reliquia_desbravador` |
 | West | `pedestal_agricultura` | `semente_criacao` |
 
-**Requirements:** Minecraft **1.21.1** · NeoForge **21.1.233** · JDK **21**
+**Requirements:** Minecraft **1.21.1** · NeoForge **21.1.232** · JDK **21**
 
 **Build**
 
@@ -116,7 +116,7 @@ Mecânicas **exatas do código** — ver também [`docs/MANIFESTO.md`](docs/MANI
 | Pedestal | `pedestal_tech_pressure.json` — PneumaticCraft 16 bar |
 | Cadeia | Receitas em `data/nerdkube/recipe/tech/` + overrides Mekanism (`RecipeOverrideHandler`) |
 | Goo Spread | `sculk_gear_goospread.json` + mixin `BaseMachineBEMixin` (JDT) |
-| Laser / claim | Mixins `LaserArmBlockEntityMixin`, `DestroyerBlockEntityMixin` (Oritech) + `FakePlayerOwnerRegistry` |
+| Laser / claim | Mixins Oritech + `FakePlayerProgressionGuard` (bloqueia `FakeMachinePlayer` mesmo com UUID do dono) |
 | Amuleto | `nucleo_materia_pressure.json` → pedestal **norte** |
 
 ### Magia (pilar Magia)

@@ -94,7 +94,6 @@ public final class ModCreativeTabs {
                         output.accept(ModItems.COMPONENTE_AGRI_STAGE1_COMPLETO);
                         output.accept(ModItems.MASSA_RUNICA_CRUA);
                         output.accept(ModItems.RUNIC_CRYSTAL_CAKE);
-                        output.accept(ModItems.AGRI_CORE_CROP);
                         output.accept(ModItems.RAIZES_DOCES);
                         output.accept(ModItems.RAIZES_DOCES_FRITAS);
                         output.accept(ModItems.RAIZES_ANCESTRAIS_EM_CONSERVA);
