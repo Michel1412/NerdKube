@@ -38,6 +38,6 @@ Atualize versões no script e em `gradle.properties` quando o modpack mudar.
 .\gradlew deployToModpack
 ```
 
-Copia `build/libs/nerdkube-<versão>.jar` → `modpack_mods_dir` (nome em `modpack_deploy_jar`, ex.: `nerdkube-0.6.0.jar`).
+Copia `build/libs/nerdkube-<versão>.jar` → `modpack_mods_dir` (mesmo nome gerado pelo Gradle, alinhado a `mod_version` / tag `v*`).
 
 Os JARs em `libs/` estão no `.gitignore` — não versionar mods de terceiros.

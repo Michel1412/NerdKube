@@ -220,7 +220,7 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             mod_id                 : mod_id,
             mod_name               : mod_name,
             mod_license            : mod_license,
-            mod_version            : mod_version,
+            mod_version            : project.version,
     ]
     inputs.properties replaceProperties
     expand replaceProperties
@@ -247,13 +247,11 @@ tasks.register('deployToModpack', Copy) {
     description = 'Copia o JAR compilado para a pasta mods do modpack CurseForge'
     group = 'nerdkube'
     def deployDir = file(modpack_mods_dir)
-    def deployName = modpack_deploy_jar as String
-    def jarOut = tasks.named('jar', Jar).get().archiveFile
-    from(jarOut)
+    def jarTask = tasks.named('jar', Jar)
+    from(jarTask.flatMap { it.archiveFile })
     into(deployDir)
-    rename { deployName }
     doLast {
-        logger.lifecycle("Deploy: ${jarOut.get().asFile} -> ${deployDir}/${deployName}")
+        logger.lifecycle("Deploy: ${jarTask.get().archiveFile.get().asFile} -> ${deployDir}/${jarTask.get().archiveFileName.get()}")
     }
 }
 
