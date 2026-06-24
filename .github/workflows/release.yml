@@ -46,36 +46,10 @@ jobs:
         env:
           CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-        run: |
-          TOKEN="$(echo -n "$CURSEFORGE_TOKEN" | tr -d '\r\n' | sed 's/^["'\'']//;s/["'\'']$//')"
-          PROJECT_ID="$(echo -n "$CURSEFORGE_PROJECT_ID" | tr -d '[:space:]')"
-          if [ -z "$TOKEN" ] || [ -z "$PROJECT_ID" ]; then
-            echo "::error::Defina CURSEFORGE_TOKEN e CURSEFORGE_PROJECT_ID em Settings > Secrets and variables > Actions."
-            exit 1
-          fi
-          echo "CurseForge project ID (secret): $PROJECT_ID"
-          echo "Token length: ${#TOKEN} chars"
-          HTTP=$(curl -sS -o /tmp/cf-project.json -w "%{http_code}" \
-            -H "x-api-key: $TOKEN" \
-            -H "Accept: application/json" \
-            "https://api.curseforge.com/v1/mods/$PROJECT_ID")
-          echo "CurseForge project lookup: HTTP $HTTP"
-          if [ "$HTTP" != "200" ]; then
-            cat /tmp/cf-project.json
-            echo ""
-            if [ "$HTTP" = "403" ]; then
-              echo "::error::403 Forbidden — token invalido, secret com aspas/espacos, PROJECT_ID errado (esperado: 1580917), ou conta sem acesso ao projeto. Gere o token em https://console.curseforge.com/ e confira que a conta e dona do mod."
-            else
-              echo "::error::Token ou PROJECT_ID invalido. O ID e numerico (barra lateral do projeto na CurseForge)."
-            fi
-            exit 1
-          fi
-          jq -r '"Projeto: \(.data.name) (\(.data.slug)) id=\(.data.id)"' /tmp/cf-project.json
+        run: bash scripts/curseforge-validate.sh
 
       - name: Build and publish to CurseForge
         env:
-          CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
-          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
           CHANGELOG: "Release ${{ steps.version.outputs.mod_version }} - see docs/MANIFESTO.md for progression details."
         run: |
           chmod +x gradlew
