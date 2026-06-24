@@ -91,4 +91,30 @@ download_curseforge_cdn "7463040" "$JDT_JAR"
 download_curseforge_cdn "8226923" "$FTB_LIB_JAR"
 download_curseforge_cdn "8241176" "$FTB_CHUNKS_JAR"
 
-echo "All compile-only libs ready in $LIBS"
+REQUIRED_JARS=(
+  "$JADE_JAR"
+  "$FD_JAR"
+  "$JEI_JAR"
+  "$MEK_JAR"
+  "$MEKGEN_JAR"
+  "$ORITECH_JAR"
+  "$JDT_JAR"
+  "$ARCH_JAR"
+  "$FTB_LIB_JAR"
+  "$FTB_CHUNKS_JAR"
+)
+
+missing=0
+for jar in "${REQUIRED_JARS[@]}"; do
+  if [[ ! -f "$LIBS/$jar" ]]; then
+    echo "ERROR: missing compile-only JAR: $jar" >&2
+    missing=1
+  fi
+done
+
+if [[ "$missing" -ne 0 ]]; then
+  echo "ERROR: ci-setup-libs incomplete. If this run is from an old git tag, move the tag to main (git tag -f vX.Y.Z && git push -f origin vX.Y.Z)." >&2
+  exit 1
+fi
+
+echo "All compile-only libs ready in $LIBS (${#REQUIRED_JARS[@]} JARs)"

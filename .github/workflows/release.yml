@@ -29,7 +29,9 @@ jobs:
           cache: gradle
 
       - name: Fetch compile-only libs
-        run: bash scripts/ci-setup-libs.sh
+        run: |
+          bash scripts/ci-setup-libs.sh
+          ls -la libs/
 
       - name: Resolve version
         id: version
