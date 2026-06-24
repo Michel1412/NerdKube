@@ -1,45 +1,61 @@
-# Testa token + project ID da CurseForge (mesmo check do CI).
+# Testa token + endpoints CurseForge (mesmo check do CI).
 # Uso:
-#   $env:CURSEFORGE_TOKEN = "seu-token-do-console"
+#   $env:CURSEFORGE_TOKEN = "sua-chave-do-console"
 #   $env:CURSEFORGE_PROJECT_ID = "1580917"
 #   .\scripts\test-curseforge-api.ps1
 
 $ErrorActionPreference = "Stop"
 
-$token = $env:CURSEFORGE_TOKEN?.Trim()
-$projectId = if ($env:CURSEFORGE_PROJECT_ID) { $env:CURSEFORGE_PROJECT_ID.Trim() } else { "1580917" }
+$bash = Get-Command bash -ErrorAction SilentlyContinue
+if ($bash) {
+    & $bash.Source (Join-Path $PSScriptRoot "curseforge-validate.sh")
+    exit $LASTEXITCODE
+}
+
+function Sanitize-Token([string]$Value) {
+    if ([string]::IsNullOrEmpty($Value)) { return "" }
+    return $Value.Trim().Trim('"').Trim("'") -replace "`r`n", ""
+}
+
+$token = Sanitize-Token $env:CURSEFORGE_TOKEN
+$projectId = if ($env:CURSEFORGE_PROJECT_ID) { ($env:CURSEFORGE_PROJECT_ID -replace '\s', '') } else { "1580917" }
 
 if ([string]::IsNullOrWhiteSpace($token)) {
-    Write-Host "ERRO: defina CURSEFORGE_TOKEN (https://console.curseforge.com/ -> API Keys)." -ForegroundColor Red
+    Write-Host "ERRO: defina CURSEFORGE_TOKEN (https://console.curseforge.com/)." -ForegroundColor Red
     exit 1
 }
-
-Write-Host "Project ID: $projectId"
-Write-Host "Token length: $($token.Length) chars (nao exibimos o valor)"
 
 $headers = @{ "x-api-key" = $token; "Accept" = "application/json" }
-$uri = "https://api.curseforge.com/v1/mods/$projectId"
 
-try {
-    $response = Invoke-WebRequest -Uri $uri -Headers $headers -UseBasicParsing
-    Write-Host "GET $uri -> HTTP $($response.StatusCode)" -ForegroundColor Green
-    $json = $response.Content | ConvertFrom-Json
-    Write-Host "Projeto: $($json.data.name) (slug: $($json.data.slug), id: $($json.data.id))"
-    Write-Host "OK: token tem acesso de leitura ao projeto. Upload exige ser autor/equipe com permissao de arquivo."
-} catch {
-    $status = $_.Exception.Response.StatusCode.value__
-    Write-Host "GET $uri -> HTTP $status" -ForegroundColor Red
-    if ($status -eq 403) {
-        Write-Host @"
-
-403 Forbidden — causas mais comuns:
-  1. Token invalido, expirado ou copiado com aspas/espacos extras no GitHub Secret
-  2. CURSEFORGE_PROJECT_ID errado no secret (use 1580917 para este mod)
-  3. Conta do token nao e dona/membro do projeto na CurseForge
-  4. App da API nao aprovada em https://console.curseforge.com/
-
-GitHub: Settings -> Secrets -> Actions -> CURSEFORGE_TOKEN e CURSEFORGE_PROJECT_ID=1580917
-"@ -ForegroundColor Yellow
+function Test-Cf([string]$Path) {
+    $uri = "https://api.curseforge.com/v1/$Path"
+    try {
+        $r = Invoke-WebRequest -Uri $uri -Headers $headers -UseBasicParsing
+        return @{ Uri = $uri; Status = [int]$r.StatusCode; Json = ($r.Content | ConvertFrom-Json) }
+    } catch {
+        $status = [int]$_.Exception.Response.StatusCode
+        return @{ Uri = $uri; Status = $status; Json = $null }
     }
+}
+
+Write-Host "Project ID: $projectId | Token length: $($token.Length) chars"
+
+foreach ($path in @("games", "mods/$projectId", "games/432/versions", "minecraft/modloader")) {
+    $r = Test-Cf $path
+    Write-Host "GET $($r.Uri) -> HTTP $($r.Status)"
+    if ($r.Status -ne 200) { exit 1 }
+}
+
+$versions = Test-Cf "games/432/versions"
+$has1211 = $false
+foreach ($group in $versions.Json.data) {
+    foreach ($v in $group.versions) {
+        if ($v -eq "1.21.1") { $has1211 = $true }
+    }
+}
+if (-not $has1211) {
+    Write-Host "ERRO: versao 1.21.1 nao encontrada na API." -ForegroundColor Red
     exit 1
 }
+Write-Host "Versao Minecraft 1.21.1: OK" -ForegroundColor Green
+Write-Host "OK: autenticacao e endpoints validados." -ForegroundColor Green

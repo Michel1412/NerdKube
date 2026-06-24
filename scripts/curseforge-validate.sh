@@ -68,9 +68,10 @@ if [[ "$HTTP" != "200" ]]; then
   exit 1
 fi
 
-MC_VERSION_COUNT=$(jq '[.data[]?.versions[]? | select(.name == "1.21.1")] | length' /tmp/cf-mc-versions.json)
-if [[ "$MC_VERSION_COUNT" -lt 1 ]]; then
-  echo "::error::Versao 1.21.1 nao encontrada na API CurseForge."
+# v1 retorna { data: [ { type, versions: ["1.21.1", ...] } ] } — strings, nao objetos
+if ! jq -e 'any(.data[]?.versions[]?; . == "1.21.1")' /tmp/cf-mc-versions.json >/dev/null; then
+  echo "::error::Versao 1.21.1 nao encontrada em GET /v1/games/432/versions."
+  jq -r '.data[]? | "type=\(.type) sample=\(.versions[0] // "n/a")"' /tmp/cf-mc-versions.json | head -5 || true
   exit 1
 fi
 echo "Versao Minecraft 1.21.1: OK na API"
@@ -83,11 +84,10 @@ if [[ "$HTTP" != "200" ]]; then
   exit 1
 fi
 
-NEOFORGE_COUNT=$(jq '[.data[]? | select(.slug? == "neoforge" or .name? == "NeoForge")] | length' /tmp/cf-loaders.json)
-if [[ "$NEOFORGE_COUNT" -lt 1 ]]; then
-  echo "::warning::NeoForge loader nao encontrado por slug; confira manualmente o projeto na CurseForge."
-else
+if jq -e 'any(.data[]?; ((.name // "") | ascii_downcase) == "neoforge")' /tmp/cf-loaders.json >/dev/null; then
   echo "Mod loader NeoForge: OK na API"
+else
+  echo "::warning::NeoForge nao encontrado em /v1/minecraft/modloader; confira o projeto na CurseForge."
 fi
 
 write_github_env "CURSEFORGE_TOKEN" "$TOKEN"
