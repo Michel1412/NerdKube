@@ -286,7 +286,7 @@ publisher {
     setChangelog(System.getenv('CHANGELOG') ?: "Release ${project.version}")
     setDisplayName("${mod_name} ${project.version}")
     setCurseEnvironment('both')
-    setJavaVersions(['Java 21'])
+    setJavaVersions([org.gradle.api.JavaVersion.VERSION_21])
 }
 
 ['publishCurseforge', 'publishMod', 'publishModrinth', 'publishGitHub'].each { taskName ->
