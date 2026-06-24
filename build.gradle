@@ -261,6 +261,7 @@ publisher {
     }
 
     def curseProjectId = System.getenv('CURSEFORGE_PROJECT_ID')?.trim()
+    def curseToken = System.getenv('CURSEFORGE_TOKEN')?.trim()
     if (curseProjectId) {
         setCurseID(curseProjectId)
     }
@@ -279,5 +280,15 @@ publisher {
 ['publishCurseforge', 'publishMod', 'publishModrinth', 'publishGitHub'].each { taskName ->
     tasks.named(taskName).configure {
         notCompatibleWithConfigurationCache('ModPublisher nao suporta configuration cache')
+        doFirst {
+            def token = System.getenv('CURSEFORGE_TOKEN')?.trim()
+            def projectId = System.getenv('CURSEFORGE_PROJECT_ID')?.trim()
+            if (!token) {
+                throw new GradleException('CURSEFORGE_TOKEN nao definido. Configure o secret no GitHub Actions.')
+            }
+            if (!projectId) {
+                throw new GradleException('CURSEFORGE_PROJECT_ID nao definido. Use o ID numerico do projeto (ex.: 1580917).')
+            }
+        }
     }
 }
