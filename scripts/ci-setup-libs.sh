@@ -74,6 +74,9 @@ MEK_JAR="$(get_prop mekanism_jar_name)"
 MEKGEN_JAR="$(get_prop mekanism_generators_jar_name)"
 ORITECH_JAR="$(get_prop oritech_jar_name)"
 JDT_JAR="$(get_prop justdirethings_jar_name)"
+FTB_LIB_JAR="$(get_prop ftb_library_jar_name)"
+FTB_CHUNKS_JAR="$(get_prop ftb_chunks_jar_name)"
+ARCH_JAR="$(get_prop architectury_jar_name)"
 
 download_modrinth "jade" "$JADE_JAR"
 download_modrinth "farmers-delight" "$FD_JAR"
@@ -81,7 +84,11 @@ download_modrinth "jei" "$JEI_JAR"
 download_modrinth "mekanism" "$MEK_JAR"
 download_modrinth "mekanism-generators" "$MEKGEN_JAR"
 download_modrinth "oritech" "$ORITECH_JAR"
+download_modrinth "architectury-api" "$ARCH_JAR"
 # Just Dire Things — CurseForge only (NeoForge 1.21.1, v1.5.7)
 download_curseforge_cdn "7463040" "$JDT_JAR"
+# FTB — CurseForge only; file IDs da instância Nerds Quadrados (minecraftinstance.json)
+download_curseforge_cdn "8226923" "$FTB_LIB_JAR"
+download_curseforge_cdn "8241176" "$FTB_CHUNKS_JAR"
 
 echo "All compile-only libs ready in $LIBS"

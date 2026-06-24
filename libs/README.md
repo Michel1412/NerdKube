@@ -24,6 +24,7 @@ Use `libs/` quando `modpack_mods_dir` não existir nesta máquina, ou para `comp
 | Mekanism + Generators | `compileOnly` — `RecipeOverrideHandler` |
 | Oritech | `compileOnly` — mixins Laser Arm / Destroyer |
 | Just Dire Things | `compileOnly` — mixin Goo Spread |
+| FTB Library + FTB Chunks + Architectury | `compileOnly` — trava FakePlayer x chunks claimed |
 | End Remastered | `compileOnly` — integração opcional |
 
 ## CI (GitHub Actions)
