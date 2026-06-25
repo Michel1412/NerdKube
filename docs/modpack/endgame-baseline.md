@@ -1,6 +1,6 @@
-# Baseline de endgame — Nerds Quadrados
+# Baseline de endgame — NerdCube
 
-Documento de referência para o mod **NerdKube** (customização de endgame). Última leitura da instância: **2026-06-17**.
+Documento de referência para o mod **NerdKube** (customização de endgame). Última leitura da instância: **2026-06-23**.
 
 ## Visão geral da progressão
 
@@ -9,7 +9,7 @@ O pack usa **FTB Quests** em modo **linear** (`progression_mode: "linear"`). O a
 ### Fluxo atual até o End
 
 1. **Início** — Corpse, Sophisticated Backpacks, FTB Ultimine
-2. **Exploração** — Waystones, Paraglider, Alex's Mobs, Artifacts, Explorer's Compass
+2. **Exploração** — Waystones, Paraglider, Alex's Mobs, Artifacts, Explorer's Compass, Nature's Compass
 3. **Os olhos do fim** — coletar **16 olhos** `endrem:*` para montar o portal
 4. **End** — ilha reformulada por **YUNG's Better End Island**; dragão com loot especial (Simply Swords)
 
@@ -55,11 +55,17 @@ Texto da quest introdutória (PT-BR): *"Você consegue encontrar 12 dos 16 olhos
 - **Apothic Enchanting** e **Silent Gear** presentes — equipamento endgame tech/magia é viável
 - **Lootr**: baús per-player em estruturas (multiplayer-friendly)
 
+## Alex's Mobs vs NerdKube
+
+- **Alex's Mobs** foi **removido do ambiente de teste** (`modpack_excluded_jars` em `gradle.properties`; JAR ausente em `mods/` da instância NerdCube).
+- Capítulo FTB `alexs_mobs` ainda existe na instância — tratar como conteúdo legado até a equipe revisar as quests.
+- **NerdKube 1.1.0+** não integra com Alex's Mobs — gates de progressão do mod usam Vanilla.
+
 ## Conteúdo fantasma (não confiar sem verificar JAR)
 
 | Conteúdo | Status |
 |----------|--------|
-| Twilight Forest | Quests + configs, **sem JAR** |
+| Twilight Forest | Quests, **sem JAR** |
 | Born In Chaos | Quests, **sem JAR** |
 | Lightman's Currency | Configs + trades, **sem JAR** |
 
@@ -78,8 +84,8 @@ O NerdKube **não deve** depender desses mods até entrarem no pack.
 
 | Área | Mods |
 |------|------|
-| Tech pesada | AE2 (+ ExtendedAE, AdvancedAE), Mekanism (+ Unleashed, More Machine), Oritech |
-| Magia avançada | Ars Nouveau, Iron's Spells, Malum, Occultism, EvilCraft |
+| Tech pesada | AE2 (+ ExtendedAE, AdvancedAE), Mekanism (+ Unleashed, More Machine), Oritech, Pipez |
+| Magia avançada | Ars Nouveau, Ars Elemental, Iron's Spells, Malum, Occultism, EvilCraft |
 | Dimensões | Mining Dimension Repolished (sem Twilight Forest ativo) |
-| Bosses/loot | Alex's Mobs, Artifacts, Simply Swords/More |
-| Utilidade | Waystones, Sophisticated Storage, RFTools |
+| Bosses/loot | Artifacts, Simply Swords/More (Alex's Mobs no pack, não no NerdKube) |
+| Utilidade | Waystones, Sophisticated Storage, RFTools, Polymorph |

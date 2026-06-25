@@ -70,13 +70,19 @@ configurations {
 
 dependencies {
     def modpackModsDir = file(modpack_mods_dir)
+    def excludedJarPatterns = (findProperty('modpack_excluded_jars') ?: '')
+            .split(',')
+            .collect { it.trim() }
+            .findAll { !it.isEmpty() }
 
     if (modpackModsDir.exists()) {
         localRuntime fileTree(modpackModsDir) {
             include '*.jar'
             exclude 'nerdkube-*.jar'
+            excludedJarPatterns.each { exclude it }
         }
-        logger.lifecycle("Modpack dev: ${modpackModsDir} (*.jar, exceto nerdkube)")
+        def excludedLabel = excludedJarPatterns.isEmpty() ? '' : " (excluídos: ${excludedJarPatterns.join(', ')})"
+        logger.lifecycle("Modpack dev: ${modpackModsDir} (*.jar, exceto nerdkube${excludedLabel})")
     } else {
         logger.warn("modpack_mods_dir não encontrado (${modpack_mods_dir}) — runClient sem mods do pack")
     }
@@ -245,12 +251,31 @@ tasks.register('deployToModpack', Copy) {
     dependsOn tasks.jar
     description = 'Copia o JAR compilado para a pasta mods do modpack CurseForge'
     group = 'nerdkube'
-    def deployDir = file(modpack_mods_dir)
-    def jarTask = tasks.named('jar', Jar)
-    from(jarTask.flatMap { it.archiveFile })
+    def deployDir = providers.provider { file(modpack_mods_dir) }
+    def excludedJarPatterns = (findProperty('modpack_excluded_jars') ?: '')
+            .split(',')
+            .collect { it.trim() }
+            .findAll { !it.isEmpty() }
+    def deployedJarName = tasks.named('jar', Jar).flatMap { it.archiveFileName }
+    from(tasks.named('jar', Jar).flatMap { it.archiveFile })
     into(deployDir)
     doLast {
-        logger.lifecycle("Deploy: ${jarTask.get().archiveFile.get().asFile} -> ${deployDir}/${jarTask.get().archiveFileName.get()}")
+        def dir = deployDir.get()
+        def deployedJar = deployedJarName.get()
+        excludedJarPatterns.each { String pattern ->
+            def regex = pattern.replace('.', '\\.').replace('*', '.*')
+            dir.eachFile { File jar ->
+                if (jar.isFile() && jar.name.matches(regex) && jar.delete()) {
+                    logger.lifecycle("Removido do modpack de teste: ${jar.name}")
+                }
+            }
+        }
+        dir.eachFile { File jar ->
+            if (jar.isFile() && jar.name.startsWith('nerdkube-') && jar.name.endsWith('.jar') && jar.name != deployedJar && jar.delete()) {
+                logger.lifecycle("Removido versão antiga: ${jar.name}")
+            }
+        }
+        logger.lifecycle("Deploy concluído em ${dir} (${deployedJar})")
     }
 }
 

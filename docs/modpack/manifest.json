@@ -1,16 +1,16 @@
 {
-  "snapshotDate": "2026-06-17",
-  "packName": "Nerds Quadrados",
+  "snapshotDate": "2026-06-23",
+  "packName": "NerdCube",
   "packType": "local-curseforge-instance",
-  "instancePath": "G:\\CurseForge\\minecraft\\Instances\\Nerds Quadrados",
+  "instancePath": "G:\\CurseForge\\minecraft\\Instances\\NerdCube",
   "minecraft": "1.21.1",
   "loader": {
     "name": "NeoForge",
     "version": "21.1.233"
   },
   "counts": {
-    "modJars": 196,
-    "curseforgeAddons": 202,
+    "modJars": 213,
+    "curseforgeAddons": 220,
     "shaderPacks": 5,
     "resourcePacks": 1
   },
@@ -27,13 +27,21 @@
       { "id": "500D7B5AF323F232", "title": "Exploração" }
     ],
     "activeChapters": [
-      "corpos",
-      "os_olhos_do_fim",
-      "alexs_mobs",
+      "agora_vai",
+      "armaduras",
       "artifacts",
+      "corpos",
       "explorers_compass",
+      "farms",
+      "fornalhar",
       "ftb_ultimine",
+      "minecraft_3",
+      "os_olhos_do_fim",
       "paraglider",
+      "primeiros_passos",
+      "pylons",
+      "sementes_e_sementes",
+      "simples",
       "sophisticated_backpacks",
       "waystones"
     ],
@@ -47,6 +55,11 @@
         "file": "born_in_chaos.snbt",
         "modId": "born_in_chaos_v1",
         "status": "quest-only — mod JAR ausente"
+      },
+      {
+        "file": "alexs_mobs.snbt",
+        "modId": "alexsmobs",
+        "status": "quest-only — mod removido do ambiente de teste"
       }
     ],
     "orphanedLangEntries": [
@@ -117,7 +130,7 @@
     "ftbChunks": "ftb-chunks-neoforge-2101.1.18.jar"
   },
   "techPillars": ["appliedenergistics2", "mekanism", "oritech"],
-  "magicPillars": ["ars_nouveau", "irons_spellbooks", "malum", "occultism"],
+  "magicPillars": ["ars_nouveau", "ars_elemental", "irons_spellbooks", "malum", "occultism"],
   "worldgen": [
     "terralith",
     "terrablender",

@@ -5,7 +5,7 @@
 Por padrão, o Gradle carrega **todos os JARs** de:
 
 ```
-G:\CurseForge\minecraft\Instances\Nerds Quadrados\mods\
+G:\CurseForge\minecraft\Instances\NerdCube\mods\
 ```
 
 (configurável em `gradle.properties` → `modpack_mods_dir`)

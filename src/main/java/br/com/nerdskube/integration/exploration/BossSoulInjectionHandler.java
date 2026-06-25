@@ -12,32 +12,31 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 
 /**
  * Transforma {@code fragmento_combate_stage1} em {@code componente_combate_stage1_completo}
- * ao matar um Verme do Vazio (ou Urso Grizzly do Alex's Mobs).
+ * ao matar o Wither ou o Ender Dragon com o fragmento no inventário.
  */
 @EventBusSubscriber(modid = NerdKube.MOD_ID)
-public final class VoidWormSoulHandler {
-    private static final ResourceLocation VOID_WORM =
-            ResourceLocation.fromNamespaceAndPath("alexsmobs", "void_worm");
-    private static final ResourceLocation GRIZZLY_BEAR =
-            ResourceLocation.fromNamespaceAndPath("alexsmobs", "grizzly_bear");
+public final class BossSoulInjectionHandler {
+    private static final ResourceLocation WITHER =
+            ResourceLocation.fromNamespaceAndPath("minecraft", "wither");
+    private static final ResourceLocation ENDER_DRAGON =
+            ResourceLocation.fromNamespaceAndPath("minecraft", "ender_dragon");
 
-    private VoidWormSoulHandler() {}
+    private BossSoulInjectionHandler() {}
 
     @SubscribeEvent
     public static void onLivingDeath(LivingDeathEvent event) {
-        if (!ModList.get().isLoaded("alexsmobs") || event.getEntity().level().isClientSide()) {
+        if (event.getEntity().level().isClientSide()) {
             return;
         }
 
         LivingEntity victim = event.getEntity();
         ResourceLocation entityId = BuiltInRegistries.ENTITY_TYPE.getKey(victim.getType());
-        if (!VOID_WORM.equals(entityId) && !GRIZZLY_BEAR.equals(entityId)) {
+        if (!WITHER.equals(entityId) && !ENDER_DRAGON.equals(entityId)) {
             return;
         }
 
@@ -56,7 +55,7 @@ public final class VoidWormSoulHandler {
             return;
         }
 
-        killer.level().playSound(null, killer.blockPosition(), SoundEvents.ENDER_DRAGON_GROWL, SoundSource.PLAYERS, 0.7F, 0.9F);
+        killer.level().playSound(null, killer.blockPosition(), SoundEvents.WITHER_SPAWN, SoundSource.PLAYERS, 0.7F, 0.9F);
         if (killer instanceof ServerPlayer serverPlayer) {
             serverPlayer.containerMenu.broadcastChanges();
         }

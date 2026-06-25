@@ -7,7 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 
 /**
  * Blocos de automação que simulam jogador (clique, quebra, ferramentas).
- * Apenas mods presentes no modpack Nerds Quadrados.
+ * Apenas mods presentes no modpack NerdCube.
  */
 public final class FakePlayerOwnerRegistry {
     public enum Handling {

@@ -87,12 +87,10 @@ public final class NerdKubeJeiRecipes {
         addInfo(registration, ModItems.RELIQUIA_DESBRAVADOR.get(), "reliquia_desbravador", 6);
         addInfo(registration, ModItems.SEMENTE_CRIACAO.get(), "semente_criacao", 8);
         addInfo(registration, ModItems.PEDESTAL_MAGIA.get(), "pedestal_magia");
-        addInfo(registration, ModItems.PEDESTAL_EXPLORACAO.get(), "pedestal_exploracao", 4);
+        addInfo(registration, ModItems.PEDESTAL_EXPLORACAO.get(), "pedestal_exploracao", 6);
         addInfo(registration, ModItems.PEDESTAL_AGRICULTURA.get(), "pedestal_agricultura");
         addInfo(registration, ModItems.CUBE_MAKER.get(), "cube_maker");
         addInfo(registration, ModItems.NERD_CUBE.get(), "nerd_cube");
-
-        addExternalInfo(registration, "alexsmobs:transmutation_table", "alexsmobs_transmutation_table", 4);
 
         addExternalInfo(registration, "farmersdelight:skillet", "farmersdelight_skillet", 4);
 

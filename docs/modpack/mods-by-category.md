@@ -1,18 +1,18 @@
-# Mods por categoria — Nerds Quadrados
+# Mods por categoria — NerdCube
 
-Snapshot: **196 JARs** em `mods/` + **6** pacotes (shaders + PT-BR). Lista completa em `mods-list.txt`.
+Snapshot: **213 JARs** em `mods/` + **6** pacotes (shaders + PT-BR). Lista completa em `mods-list.txt`.
 
 ## Tecnologia e automação
 
-AE2, AE2 Wireless Terminals, ExtendedAE, AdvancedAE, AE2 Import Export Card, AEInfinityBooster, AE2 JEI Integration, AE2 Network Analyser, AE2 Crafting Tree, Mekanism (+ Additions, Generators, Tools, Unleashed, More Machine), MekaGenJei, MekaJadeUpgrades, Oritech, Oritech Things, Ender IO, Ender Storage, Powah!, Extreme Reactors, PneumaticCraft, RFTools (Base, Storage, Utility), Flux Networks, XNet, Modular Routers, CC: Tweaked, Actually Additions, Just Dire Things, Iron Furnaces, Item Collectors, Trading Post, Trash Cans, Building Gadgets, Tom's Simple Storage, Functional Storage, Sophisticated Core/Storage/Backpacks
+AE2, AE2 Wireless Terminals, ExtendedAE, AdvancedAE, AE2 Import Export Card, AEInfinityBooster, AE2 JEI Integration, AE2 Network Analyser, AE2 Crafting Tree, Mekanism (+ Additions, Generators, Tools, Unleashed, More Machine), MekaGenJei, MekaJadeUpgrades, Oritech, Oritech Things, Ender IO, Ender Storage, Powah!, Extreme Reactors, PneumaticCraft, RFTools (Base, Storage, Utility), Flux Networks, XNet, Modular Routers, CC: Tweaked, Actually Additions, Just Dire Things, Iron Furnaces, Item Collectors, Trading Post, Trash Cans, Building Gadgets, Tom's Simple Storage, Functional Storage, Sophisticated Core/Storage/Backpacks, **Pipez**, **Polymorph**
 
 ## Magia
 
-Ars Nouveau, Iron's Spells 'n Spellbooks, Iron's Lib, Malum, Occultism, EvilCraft, Hexerei
+Ars Nouveau, **Ars Elemental**, Iron's Spells 'n Spellbooks, Iron's Lib, Malum, Occultism, EvilCraft, Hexerei
 
 ## Exploração e mundo
 
-Terralith, TerraBlender, Lithostitched, Explorify, YUNG's API + Better Caves/Desert Temples/Dungeons/End Island/Jungle Temples/Mineshafts/Nether Fortresses/Ocean Monuments/Witch Huts/Cave Biomes, Mining Dimension Repolished, **End Remastered**, Alex's Mobs, Explorer's Compass, Waystones, Paragliders, Lootr, Torchmaster
+Terralith, TerraBlender, Lithostitched, Explorify, YUNG's API + Better Caves/Desert Temples/Dungeons/End Island/Jungle Temples/Mineshafts/Nether Fortresses/Ocean Monuments/Witch Huts/Cave Biomes, Mining Dimension Repolished, **End Remastered**, Explorer's Compass, **Nature's Compass**, Waystones, Paragliders, Lootr, Torchmaster
 
 ## Combate e equipamento
 
@@ -20,7 +20,7 @@ Silent Gear (+ JEI), Silent's Gems, Silent Lib, Simply Swords, Simply More, Simp
 
 ## Agricultura e comida
 
-Farmer's Delight, Farmer's Sandwiches, [Let's Do] Farm & Charm, [Let's Do] Bakery, Mystical Agriculture (+ Agradditions), Botany Pots (+ Tiers, Mystical compat, Trees), Productive Bees, Cooking for Blockheads
+Farmer's Delight, Farmer's Sandwiches, [Let's Do] Farm & Charm, [Let's Do] Bakery, Mystical Agriculture (+ Agradditions), Botany Pots (+ Tiers, Mystical compat, Trees), Productive Bees, Cooking for Blockheads, **Farming for Blockheads**
 
 ## Construção
 
@@ -28,7 +28,7 @@ Macaw's (Bridges, Doors, Fences, Furniture, Holidays, Paths, Roofs, Stairs, Trap
 
 ## QoL e progressão
 
-JEI, FTB JEI Extras, Jade, GuideME, Simply Tooltips, Advanced Loot Info, FTB Library, **FTB Quests**, FTB Chunks, FTB Teams, FTB Ultimine, FTB Filter System, Corpse, PlayerRevive, Easy Villagers, Controlling, Searchables, FastWorkbench, FastSuite, Clumps, Camera Mod, Emotecraft, Immersive Paintings/Melodies, Compass to Map (c2mx), Xaero's Minimap/World Map, Xaero's Waystones Compatibility
+JEI, FTB JEI Extras, Jade, GuideME, Simply Tooltips, Advanced Loot Info, FTB Library, **FTB Quests**, FTB Chunks, FTB Teams, FTB Ultimine, FTB Filter System, Corpse, PlayerRevive, Easy Villagers, Controlling, Searchables, FastWorkbench, FastSuite, Clumps, Camera Mod, Emotecraft, Immersive Paintings/Melodies, Compass to Map (c2mx), Xaero's Minimap/World Map, Xaero's Waystones Compatibility, **Configured**, **Cosmetic Armor Reworked**, **Crash Utilities**, **Extreme Sound Muffler**, **Inventory Profiles Next** (+ libIPN), **Mouse Tweaks**, **Observable**
 
 ## Multiplayer
 
@@ -40,7 +40,15 @@ Sodium (+ Extra, Reese's Options, Options API), Lithium, FerriteCore, ModernFix,
 
 ## Visual
 
-Iris Shaders, Bliss, Complementary (Reimagined + Unbound), Photon, Sildur's Vibrant, Fusion (CTM), FancyMenu, Konkrete, Melody
+Iris Shaders, Bliss, Complementary (Reimagined + Unbound), Photon, Sildur's Vibrant, Fusion (CTM), FancyMenu, Konkrete, Melody, **Just Zoom**, **MCEF**
+
+## Admin e build
+
+**WorldEdit**
+
+## NerdKube
+
+**nerdkube** — mod de endgame customizado do pack
 
 ## Bibliotecas (não listar como features do pack)
 

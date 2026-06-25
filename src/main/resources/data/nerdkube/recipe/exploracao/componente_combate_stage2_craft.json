@@ -4,7 +4,7 @@
   "key": {
     "E": { "item": "silentgems:chaos_essence" },
     "F": { "item": "nerdkube:fragmento_combate_stage2" },
-    "V": { "item": "alexsmobs:void_worm_eye" }
+    "V": { "item": "minecraft:nether_star" }
   },
   "pattern": [
     "EVE",

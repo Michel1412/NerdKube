@@ -87,7 +87,7 @@ download_modrinth "oritech" "$ORITECH_JAR"
 download_modrinth "architectury-api" "$ARCH_JAR"
 # Just Dire Things — CurseForge only (NeoForge 1.21.1, v1.5.7)
 download_curseforge_cdn "7463040" "$JDT_JAR"
-# FTB — CurseForge only; file IDs da instância Nerds Quadrados (minecraftinstance.json)
+# FTB — CurseForge only; file IDs da instância NerdCube (minecraftinstance.json)
 download_curseforge_cdn "8226923" "$FTB_LIB_JAR"
 download_curseforge_cdn "8241176" "$FTB_CHUNKS_JAR"
 

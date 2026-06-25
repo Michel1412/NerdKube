@@ -1,6 +1,6 @@
 # NerdKube — Guia para agentes
 
-Mod NeoForge para o modpack **Nerds Quadrados** (MC 1.21.1). Objetivo: **customizar o endgame** mantendo alinhamento com o pack fechado no CurseForge.
+Mod NeoForge para o modpack **NerdCube** (MC 1.21.1). Objetivo: **customizar o endgame** mantendo alinhamento com o pack fechado no CurseForge.
 
 ## Leitura obrigatória (ordem)
 
@@ -9,21 +9,21 @@ Mod NeoForge para o modpack **Nerds Quadrados** (MC 1.21.1). Objetivo: **customi
 3. `docs/modpack/tech-progression.md` / `docs/modpack/magic-progression.md` — cadeias Expert tech e magia (0.3.0)
 4. `docs/modpack/recipe-overrides.md` — crafts de mods alterados pelo NerdKube
 5. `docs/modpack/mods-by-category.md` — mods instalados por categoria
-6. `docs/modpack/mods-list.txt` — lista exata de JARs (196)
+6. `docs/modpack/mods-list.txt` — lista exata de JARs (213)
 7. `docs/textures/README.md` — matrizes e paletas de texturas
 
 ## Instância do modpack (fonte da verdade)
 
 ```
-G:\CurseForge\minecraft\Instances\Nerds Quadrados\
+G:\CurseForge\minecraft\Instances\NerdCube\
 ```
 
 | Item | Valor |
 |------|-------|
 | Minecraft | 1.21.1 |
 | Loader | NeoForge 21.1.233 |
-| Mod JARs | 196 |
-| Addons CurseForge | 202 (inclui shaders + PT-BR) |
+| Mod JARs | 213 |
+| Addons CurseForge | 220 (inclui shaders + PT-BR) |
 | Idioma | PT-BR (resource pack + FTB Quests traduzido) |
 | Progressão | FTB Quests, modo linear |
 
@@ -114,20 +114,20 @@ Requisitos: **JDK 21**.
 ```powershell
 cd e:\Arquivos_Mods\NerdKube
 .\gradlew build          # compilar
-.\gradlew runClient      # cliente de desenvolvimento (carrega ~197 mods do pack)
+.\gradlew runClient      # cliente de desenvolvimento (carrega ~213 mods do pack)
 .\gradlew runServer      # servidor de desenvolvimento
 .\gradlew deployToModpack  # copia JAR para a instância CurseForge
 ```
 
 ### Ambiente de dev = modpack completo
 
-O `runClient` / `runServer` carregam **todos os JARs** de `modpack_mods_dir` (padrão: instância **Nerds Quadrados** no CurseForge), exceto `nerdkube-*.jar` (o mod em dev vem do sourceSet). Isso garante que receitas cross-mod (Oritech, PneumaticCraft, Ender IO, etc.) parseiem igual ao pack.
+O `runClient` / `runServer` carregam **todos os JARs** de `modpack_mods_dir` (padrão: instância **NerdCube** no CurseForge), exceto `nerdkube-*.jar` (o mod em dev vem do sourceSet) e JARs em `modpack_excluded_jars` (ex.: `alexsmobs-*.jar`).
 
 Heap do jogo: **8G** (`jvmArgument` em `build.gradle`).
 
 ### Deploy no modpack (teste real)
 
-Destino: `G:\CurseForge\minecraft\Instances\Nerds Quadrados\mods\nerdkube-0.2.0-SNAPSHOT.jar`
+Destino: `G:\CurseForge\minecraft\Instances\NerdCube\mods\nerdkube-1.1.0.jar`
 
 ```powershell
 .\gradlew deployToModpack

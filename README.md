@@ -1,12 +1,12 @@
 # PROJECT MANIFESTO: NERDKUBE
 
-> Mod ID: `nerdkube` · **NerdKube** extends post-End progression for the *Nerds Quadrados* modpack.
+> Mod ID: `nerdkube` · **NerdKube** extends post-End progression for the *NerdCube* modpack.
 
 ## DESCRIPTION
 
 After the End Remastered gate (16 custom eyes, YUNG's Better End Island, tuned dragon loot), **NerdKube** opens a four-pillar endgame. Each pillar — **Technology**, **Magic**, **Exploration**, and **Agriculture** — produces a unique amulet. Place all four on themed pedestals around the **Cube Maker** (`nerdkube:cube_maker`), insert a vanilla **Crafter** in the center, and craft a signed trophy: **`nerdkube:nerd_cube`** (one per player).
 
-Optional integrations: Alex's Mobs (Forbidden Transmutation Dust), Jade, JEI, Farmer's Delight, Bakery, Mystical Agriculture, and more — aligned with the closed CurseForge pack.
+Optional integrations: Jade, JEI, Farmer's Delight, Bakery, Mystical Agriculture, and more — aligned with the closed CurseForge pack.
 
 ## SUMMARY OF PROGRESSION
 
@@ -24,7 +24,7 @@ Optional integrations: Alex's Mobs (Forbidden Transmutation Dust), Jade, JEI, Fa
 | East | `pedestal_exploracao` | `reliquia_desbravador` |
 | West | `pedestal_agricultura` | `semente_criacao` |
 
-**Requirements:** Minecraft **1.21.1** · NeoForge **21.1.232** · JDK **21**
+**Requirements:** Minecraft **1.21.1** · NeoForge **21.1.233** · JDK **21**
 
 **Build**
 
@@ -73,7 +73,7 @@ Exploration → 16 endrem eyes → End portal → Dragon + Better End Island
 
 ```
 [pedestal_exploracao craft] ➔ fragmento_combate_stage1
-        ➔ [Kill Void Worm / Grizzly — 1:1] ➔ componente_combate_stage1_completo
+        ➔ [Kill Wither / Ender Dragon — 1:1] ➔ componente_combate_stage1_completo
         ➔ [Dungeon loot 1.5%] ➔ fragmento_combate_stage2 ➔ componente_combate_stage2_completo
         ➔ lamina_conquistador ➔ olho_desbravador_primal
         ➔ [Enchanting Table ritual + Forbidden Dust] ➔ ★ reliquia_desbravador ★
@@ -102,7 +102,7 @@ reliquia_desbravador (E) ─────┼── coracao_arcano (S)
                               ▼
                     ★ nerd_cube ★ (signed · 1 per player)
 
-Parallel: alexsmobs:transmutation_table + Beacon gacha (2%) ➔ poeira_transmutacao_proibida
+Parallel: pedestal_exploracao + Beacon gacha (2%) or End City chests ➔ poeira_transmutacao_proibida
 ```
 
 ---
@@ -126,7 +126,7 @@ Mecânicas **exatas do código** — ver também [`docs/MANIFESTO.md`](docs/MANI
 | Etapa | Implementação |
 |-------|----------------|
 | Pedestal | `pedestal_magia_ritual.json` — Occultism |
-| Poço | `componente_magia_stage1_void_favor.json` — Malum |
+| Poço | `oferta_poco_sombria_craft.json` — Mesa de Encantamentos + nether star |
 | Espíritos | `componente_magia_stage2_spirit_infusion.json` |
 | Sangue | `essencia_vital_instavel_blood_infuser.json` — EvilCraft |
 | Amuleto | `coracao_arcano_apparatus.json` — Ars Nouveau → pedestal **sul** |
@@ -135,9 +135,9 @@ Mecânicas **exatas do código** — ver também [`docs/MANIFESTO.md`](docs/MANI
 
 | Etapa | Implementação |
 |-------|----------------|
-| Boss | `VoidWormSoulHandler` — 1 kill (`void_worm` ou `grizzly_bear`) = 1 `componente_combate_stage1_completo` |
+| Boss | `BossSoulInjectionHandler` — 1 kill (Wither or Ender Dragon) = 1 `componente_combate_stage1_completo` |
 | Masmorra | `ExplorationChestLootModifier` — 1,5% + 3× Artifacts |
-| Lâmina | `lamina_conquistador_craft.json` — Simply Swords + Alex's Mobs |
+| Lâmina | `lamina_conquistador_craft.json` — Simply Swords + 4× Echo Shard |
 | Visor | `olho_desbravador_primal_craft.json` — 8 olhos End Remastered |
 | Ritual | `ExplorationAmuletCraftHandler` — Mesa de Encantamentos: visor na mão + lâmina + 3× núcleo alma + 3× olho forja + **1× poeira_transmutacao_proibida** |
 | Amuleto | `reliquia_desbravador` → pedestal **leste** |
@@ -153,12 +153,12 @@ Mecânicas **exatas do código** — ver também [`docs/MANIFESTO.md`](docs/MANI
 | Banquete | `massa_nutrientes_supremos_cooking.json` — FD Cooking Pot |
 | Amuleto | `semente_criacao_cooking.json` → pedestal **oeste** |
 
-### Alquimia proibida (Alex's Mobs)
+### Alquimia proibida (Vanilla + NerdKube)
 
 | Mecânica | Classe / datapack |
 |----------|-------------------|
-| Gacha | `ForbiddenTransmutationHandler` — Shift+Beacon, 30 XP, 2% |
-| Loot raro | Override `data/alexsmobs/loot_table/gameplay/transmutation_table_rare.json` |
+| Gacha | `ForbiddenTransmutationHandler` — Shift+Beacon no `pedestal_exploracao`, 30 XP, 2% |
+| Loot alternativo | `EndCityPoeiraLootModifier` — 2% em `minecraft:chests/end_city` |
 | Uso | Consumida no ritual da **Relíquia do Desbravador** |
 
 ### Ritual final NerdCube

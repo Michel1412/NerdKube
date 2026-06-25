@@ -1,21 +1,21 @@
 ---
-description: Contexto do projeto NerdKube e modpack Nerds Quadrados
+description: Contexto do projeto NerdKube e modpack NerdCube
 alwaysApply: true
 ---
 
 # NerdKube
 
-Mod NeoForge 1.21.1 para customizar o **endgame** do modpack **Nerds Quadrados**.
+Mod NeoForge 1.21.1 para customizar o **endgame** do modpack **NerdCube**.
 
 ## Fontes de verdade
 
-1. Instância: `G:\CurseForge\minecraft\Instances\Nerds Quadrados\`
+1. Instância: `G:\CurseForge\minecraft\Instances\NerdCube\`
 2. Docs do repo: `docs/modpack/manifest.json`, `endgame-baseline.md`
 3. `AGENTS.md` na raiz
 
 ## Pack em resumo
 
-- NeoForge **21.1.233**, **196** mod JARs, idioma **PT-BR**
+- NeoForge **21.1.233**, **213** mod JARs, idioma **PT-BR**
 - Progressão **FTB Quests linear**; gate do End = **End Remastered** (16 olhos)
 - End = **YUNG's Better End Island**; loot dragão tunado em **Simply Swords**
 - Multiplayer: Corpse, PlayerRevive (60s bleed, sem self-revive), Plasmo Voice

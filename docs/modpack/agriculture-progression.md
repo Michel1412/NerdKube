@@ -49,7 +49,7 @@ Semente da Criação (FD Cooking Pot final — 1× conserva)
 
 ## IDs corrigidos (spec vs pack)
 
-| Spec original | ID no pack Nerds Quadrados |
+| Spec original | ID no pack NerdCube |
 |---------------|---------------------------|
 | `macawsroofs:` / `macawsfurniture:` / `macawsfences:` / `macawspaths:` | `mcwroofs:`, `mcwfurnitures:`, `mcwfences:`, `mcwpaths:` |
 | `rechiseled:chisled_quartz_block` | `rechiseled:quartz_block_bordered` |

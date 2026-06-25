@@ -22,8 +22,6 @@ import java.util.Set;
  * O Enderic Laser (Oritech) usa {@code FakeMachinePlayer} — subclasse de {@link ServerPlayer} com perfil do dono.
  */
 public final class FakePlayerProgressionGuard {
-    private static final ResourceLocation TRANSMUTATION_TABLE =
-            ResourceLocation.fromNamespaceAndPath("alexsmobs", "transmutation_table");
     private static final ResourceLocation BAKER_STATION =
             ResourceLocation.fromNamespaceAndPath("bakery", "baker_station");
 
@@ -102,7 +100,7 @@ public final class FakePlayerProgressionGuard {
             return true;
         }
         ResourceLocation id = BuiltInRegistries.BLOCK.getKey(block);
-        return id.equals(TRANSMUTATION_TABLE) || id.equals(BAKER_STATION);
+        return id.equals(BAKER_STATION);
     }
 
     public static boolean isProtectedPickupItem(ItemStack stack) {

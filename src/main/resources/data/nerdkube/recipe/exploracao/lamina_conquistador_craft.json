@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "B": { "item": "alexsmobs:sculk_boomer" },
+    "B": { "item": "minecraft:echo_shard" },
     "G": { "item": "simplyswords:netherfused_gem" },
     "U": { "tag": "simplyswords:uniques" }
   },

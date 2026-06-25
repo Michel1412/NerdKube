@@ -1,9 +1,9 @@
 # MANIFESTO DO PROJETO: NERDKUBE
 
-**NerdKube** é o mod de endgame do modpack *Nerds Quadrados*. Ele estende a progressão **após** o gate do End (End Remastered — 16 olhos, YUNG's Better End Island, loot do dragão via Simply Swords) com **quatro pilares de harmonia** que convergem no **Ritual do Fabricador de Cubo** (`nerdkube:cube_maker`), gerando o troféu assinado `nerdkube:nerd_cube`.
+**NerdKube** é o mod de endgame do modpack *NerdCube*. Ele estende a progressão **após** o gate do End (End Remastered — 16 olhos, YUNG's Better End Island, loot do dragão via Simply Swords) com **quatro pilares de harmonia** que convergem no **Ritual do Fabricador de Cubo** (`nerdkube:cube_maker`), gerando o troféu assinado `nerdkube:nerd_cube`.
 
-> **Versão do mod:** `0.6.0` · **Minecraft:** `1.21.1` · **Loader:** NeoForge `21.1.233`  
-> **Idioma principal:** PT-BR · **Integrações opcionais:** Alex's Mobs, Jade, JEI, Bakery, Farmer's Delight, entre outros.
+> **Versão do mod:** `1.1.0` · **Minecraft:** `1.21.1` · **Loader:** NeoForge `21.1.233`  
+> **Idioma principal:** PT-BR · **Integrações opcionais:** Jade, JEI, Bakery, Farmer's Delight, entre outros.
 
 ---
 
@@ -13,7 +13,7 @@
 |--------|------------------|------------------------|-----------------|-------------------------------|
 | **Tecnologia** | Cadeias industriais, energia extrema e corrupção mecânica | PneumaticCraft, Ender IO, Oritech, Mekanism / Mekanism More, Just Dire Things, Actually Additions, Powah, AE2 | `nerdkube:pedestal_tech` (Norte) | `nerdkube:nucleo_de_materia` — *Núcleo de Matéria* |
 | **Magia** | Rituais, sangue, espíritos e aparato arcano | Occultism, Malum, EvilCraft, Ars Nouveau, Iron's Spells | `nerdkube:pedestal_magia` (Sul) | `nerdkube:coracao_arcano` — *Coração Arcano* |
-| **Exploração** | Bosses, masmorras, dimensões e combate de elite | Alex's Mobs, Artifacts, Simply Swords, End Remastered, Mob Grinding Utils, Lootr, YUNG's / Explorify | `nerdkube:pedestal_exploracao` (Leste) | `nerdkube:reliquia_desbravador` — *Relíquia do Desbravador* |
+| **Exploração** | Bosses, masmorras, dimensões e combate de elite | Artifacts, Simply Swords, End Remastered, Mob Grinding Utils, Lootr, YUNG's / Explorify | `nerdkube:pedestal_exploracao` (Leste) | `nerdkube:reliquia_desbravador` — *Relíquia do Desbravador* |
 | **Agricultura** | Botânica expert, fermentação lenta e gastronomia ritual | Mystical Agriculture, Productive Bees, Botany Pots Tiers, Farm & Charm, Let's Do Bakery, Farmer's Delight, Macaw's / Refurbished Furniture | `nerdkube:pedestal_agricultura` (Oeste) | `nerdkube:semente_criacao` — *Semente da Criação* |
 
 **Ritual final:** com os quatro amuletos nos pedestais corretos, `minecraft:crafter` no centro do `cube_maker` e botão **Fabricar**, o jogador obtém `nerdkube:nerd_cube` com assinatura `nerdkube:crafted_by`. **Limite: 1 troféu por jogador** (`nerdkube:has_crafted_trophy`).
@@ -38,7 +38,7 @@
 ### Pilar Magia → `nerdkube:coracao_arcano`
 
 1. **Pedestal de Magia** — Occultism Ritual `craft_afrit` (`pedestal_magia_ritual.json`).
-2. **Oferenda ao Abismo** (`oferta_poco_sombria`) — **sem receita datapack**; obtenção mística documentada no JEI.
+2. **Oferenda ao Abismo** (`oferta_poco_sombria`) — craft shapeless: Mesa de Encantamentos + bastão de relâmpago + nether star (`oferta_poco_sombria_craft.json`).
 3. **Coração Sombrio Purificado** — lançar oferenda no poço sem fundo Malum (`componente_magia_stage1_void_favor.json`).
 4. **Pergaminho de Geometria Proibida** — craft 3×3 (`fragmento_magia_stage2_craft.json`).
 5. **Ídolo de Cinzas e Almas** — Malum Spirit Infusion (`componente_magia_stage2_spirit_infusion.json`).
@@ -52,10 +52,10 @@
 
 1. **Pedestal de Exploração** — craft 3×3 Silent Gear + Waystones + Pylons (`pedestal_exploracao_craft.json`).
 2. **Amuleto de Sangue Petrificado** — Mob Grinding Utils Solidifier (`fragmento_combate_stage1`).
-3. **Núcleo de Alma do Vazio** — evento `VoidWormSoulHandler`: ao matar `alexsmobs:void_worm` **ou** `alexsmobs:grizzly_bear` com o fragmento no inventário, **apenas 1 unidade** da pilha vira `componente_combate_stage1_completo` (não transforma a pilha inteira).
+3. **Núcleo de Alma do Vazio** — evento `BossSoulInjectionHandler`: ao matar `minecraft:wither` **ou** `minecraft:ender_dragon` com o fragmento no inventário, **apenas 1 unidade** da pilha vira `componente_combate_stage1_completo` (não transforma a pilha inteira).
 4. **Insígnia do Desbravador Perdido** — loot 1,5% em masmorras (Lootr / YUNG's / Explorify) + 3× Artifacts (`fragmento_combate_stage2`).
 5. **Olho da Forja Ancestral** — craft 3×3 (`componente_combate_stage2_craft.json`).
-6. **Punho da Lâmina Sacrificada** — craft 3×3 (`lamina_conquistador_craft.json`): 4× `simplyswords:netherfused_gem`, 4× `alexsmobs:sculk_boomer`, centro em tag `simplyswords:uniques` *(não usa mais bigorna)*.
+6. **Punho da Lâmina Sacrificada** — craft 3×3 (`lamina_conquistador_craft.json`): 4× `simplyswords:netherfused_gem`, 4× `minecraft:echo_shard`, centro em tag `simplyswords:uniques` *(não usa mais bigorna)*.
 7. **Visor das Doze Dimensões** — 8 olhos End Remastered + nether star (`olho_desbravador_primal_craft.json`).
 8. **Relíquia do Desbravador** — ritual na Mesa de Encantamentos (`ExplorationAmuletCraftHandler`): visor na mão + 1× lâmina + 3× núcleo de alma + 3× olho da forja + **1× poeira de transmutação proibida** → amuleto do pedestal **leste**.
 
@@ -91,14 +91,11 @@
 
 ### Camada alquímica de endgame → `nerdkube:poeira_transmutacao_proibida`
 
-*(Integração com **Alex's Mobs** — `alexsmobs:transmutation_table` no modpack.)*
-
-- **Craft da mesa** (Alex's Mobs): nether star + 2× `alexsmobs:farseer_arm` + 3× obsidian → `alexsmobs:transmutation_table`
 - **Gacha alquímico** (`ForbiddenTransmutationHandler`):
-  - **Agachado + clique direito** em `alexsmobs:transmutation_table` segurando `minecraft:beacon` na mão principal.
+  - **Agachado + clique direito** em `nerdkube:pedestal_exploracao` segurando `minecraft:beacon` na mão principal.
   - **Custo fixo:** 30 níveis de XP + 1 Beacon (sempre consumidos).
   - **Chance:** **2%** de sucesso → dropa `poeira_transmutacao_proibida`.
-- **Loot raro da mesa:** entrada em `alexsmobs:gameplay/transmutation_table_rare` (peso 2).
+- **Loot alternativo:** `EndCityPoeiraLootModifier` — 2% em baús de `minecraft:chests/end_city`.
 - **Status no ritual:** catalisador consumido na forja da **Relíquia do Desbravador** (pilar exploração).
 
 ---
@@ -153,10 +150,10 @@ Exploração vanilla / estruturas
 ```
 [Craft pedestal_exploracao]
         ➔ nerdkube:fragmento_combate_stage1
-        ➔ [Matar Void Worm / Grizzly — 1 boss : 1 fragmento] ➔ componente_combate_stage1_completo
+        ➔ [Matar Wither / Ender Dragon — 1 boss : 1 fragmento] ➔ componente_combate_stage1_completo
         ➔ [Loot masmorra 1,5%] ➔ fragmento_combate_stage2
         ➔ nerdkube:componente_combate_stage2_completo
-        ➔ nerdkube:lamina_conquistador (craft Simply Swords + Alex's Mobs)
+        ➔ nerdkube:lamina_conquistador (craft Simply Swords + 4× Echo Shard)
         ➔ nerdkube:olho_desbravador_primal (8 olhos endrem + nether star)
         ➔ [Mesa de Encantamentos] ➔ ★ nerdkube:reliquia_desbravador ★
 ```
@@ -193,12 +190,11 @@ nerdkube:reliquia_desbravador (L) ─┼─ nerdkube:coracao_arcano (S)
                     ★ nerdkube:nerd_cube ★
                     (assinado · 1× por jogador)
 
-        ═══════════ camada paralela (Alex's Mobs) ═══════════
+        ═══════════ camada paralela (poeira proibida) ═══════════
 
-[Craft: nether star + 2× farseer_arm + 3× obsidian] ➔ alexsmobs:transmutation_table
-[Beacon + 30 níveis XP + Shift+Clique na mesa]
+[Shift+Beacon no pedestal_exploracao — 30 níveis XP]
         ➔ 2% chance ➔ nerdkube:poeira_transmutacao_proibida
-        (também no slot raro da mesa)
+        (também 2% em baús de End City)
 ```
 
 ---
@@ -212,7 +208,7 @@ nerdkube:reliquia_desbravador (L) ─┼─ nerdkube:coracao_arcano (S)
 | Lâmina | Craft shaped, não bigorna |
 | Jade | Pedestais do ritual |
 | JEI | Ingredient Info (R) em toda a cadeia + categoria Ritual NerdKube |
-| ProjectE | Removido — poeira usa Alex's Mobs Transmutation Table |
+| ProjectE | Removido — poeira via pedestal de exploração + loot End City |
 
 ---
 
@@ -230,4 +226,4 @@ nerdkube:reliquia_desbravador (L) ─┼─ nerdkube:coracao_arcano (S)
 
 ---
 
-*Última consolidação: NerdKube v0.6.0 — fontes: `ModItems.java`, `PedestalDirection.java`, handlers Java, receitas `data/nerdkube/recipe/` e snapshot do modpack Nerds Quadrados.*
+*Última consolidação: NerdKube v1.1.0 — fontes: `ModItems.java`, `PedestalDirection.java`, handlers Java, receitas `data/nerdkube/recipe/` e snapshot do modpack NerdCube.*

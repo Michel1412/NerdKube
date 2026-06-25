@@ -13,7 +13,7 @@ modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
 description='''
-Customização de endgame para o modpack Nerds Quadrados.
+Customização de endgame para o modpack NerdCube.
 '''
 
 [[dependencies.${mod_id}]]
@@ -30,7 +30,7 @@ versionRange="${minecraft_version_range}"
 ordering="NONE"
 side="BOTH"
 
-# End Remastered — gate do End no modpack Nerds Quadrados (16 olhos)
+# End Remastered — gate do End no modpack NerdCube (16 olhos)
 [[dependencies.${mod_id}]]
 modId="endrem"
 type="optional"
@@ -104,14 +104,6 @@ versionRange="[1.2.0,)"
 ordering="AFTER"
 side="BOTH"
 reason="Mixin no Laser Arm: quebras associadas ao UUID do jogador que colocou a máquina"
-
-[[dependencies.${mod_id}]]
-modId="alexsmobs"
-type="optional"
-versionRange="[1.22.0,)"
-ordering="AFTER"
-side="BOTH"
-reason="Mesa de Transmutação — gacha da Poeira de Transmutação Proibida e loot raro"
 
 [[dependencies.${mod_id}]]
 modId="ftbchunks"

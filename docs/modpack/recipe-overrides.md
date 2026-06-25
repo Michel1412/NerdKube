@@ -24,7 +24,7 @@ cd e:\Arquivos_Mods\NerdKube
 
 
 
-Confirme `G:\CurseForge\minecraft\Instances\Nerds Quadrados\mods\nerdkube-0.4.1.jar`. Reinicie o jogo após atualizar o mod (não confie só em `/reload` na primeira validação).
+Confirme `G:\CurseForge\minecraft\Instances\NerdCube\mods\nerdkube-1.1.0.jar`. Reinicie o jogo após atualizar o mod (não confie só em `/reload` na primeira validação).
 
 
 

@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    { "item": "alexsmobs:transmutation_table" },
+    { "item": "minecraft:enchanting_table" },
     { "item": "minecraft:lightning_rod" },
-    { "item": "alexsmobs:mysterious_worm" },
+    { "item": "minecraft:nether_star" },
     { "item": "evilcraft:dark_gem" },
     { "item": "malum:twisted_rock" }
   ],

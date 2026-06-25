@@ -62,6 +62,6 @@ public class NerdKube {
     }
 
     private void onServerStarting(ServerStartingEvent event) {
-        LOGGER.info("NerdKube iniciado no servidor (endgame custom para Nerds Quadrados).");
+        LOGGER.info("NerdKube iniciado no servidor (endgame custom para NerdCube).");
     }
 }

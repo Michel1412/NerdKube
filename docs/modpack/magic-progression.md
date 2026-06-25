@@ -5,7 +5,7 @@ Referência canônica da cadeia Expert do pedestal de magia (sul) e do amuleto `
 ## O que mudou na 0.4.0
 
 - Removido `fragmento_magia_stage1` (Runa de Sangue Inerente)
-- `oferta_poco_sombria` (Oferenda ao Abismo) — craft shapeless (Mesa de Transmutação + relâmpagos)
+- `oferta_poco_sombria` (Oferenda ao Abismo) — craft shapeless (Mesa de Encantamentos + bastão de relâmpago + nether star)
 - 5 itens intermediários da linha magia (lore em `ProgressionLoreItem`)
 
 ## Fluxo resumido
@@ -13,7 +13,7 @@ Referência canônica da cadeia Expert do pedestal de magia (sul) e do amuleto `
 ```
 Pedestal Magia (Occultism Ritual craft_afrit)
     ↓
-Oferenda ao Abismo (craft shapeless — alexsmobs:transmutation_table + lightning_rod + mysterious_worm)
+Oferenda ao Abismo (craft shapeless — minecraft:enchanting_table + lightning_rod + nether_star)
     ↓
 Coração Sombrio Purificado (lançar oferenda num buraco sem fundo visível)
     ↓

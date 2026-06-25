@@ -1,14 +1,13 @@
-package br.com.nerdskube.integration.alexsmobs;
+package br.com.nerdskube.integration.exploration;
 
-import br.com.nerdskube.config.NerdKubeServerConfigAccess;
 import br.com.nerdskube.NerdKube;
+import br.com.nerdskube.config.NerdKubeServerConfigAccess;
 import br.com.nerdskube.integration.fakeplayer.FakePlayerProgressionGuard;
+import br.com.nerdskube.registry.ModBlocks;
 import br.com.nerdskube.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
@@ -21,25 +20,22 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 /**
- * Roleta alquímica na Mesa de Transmutação do Alex's Mobs ({@code alexsmobs:transmutation_table}).
+ * Roleta alquímica no {@code nerdkube:pedestal_exploracao}.
  * Shift + clique direito com Beacon: 30 níveis de XP + 1 Beacon; 2% de Poeira de Transmutação Proibida.
- * O item também pode sair no slot raro da mesa (loot table {@code alexsmobs:gameplay/transmutation_table_rare}).
+ * Também pode sair em baús de Cidade do End ({@code minecraft:chests/end_city}).
  */
 @EventBusSubscriber(modid = NerdKube.MOD_ID)
 public final class ForbiddenTransmutationHandler {
-    private static final ResourceLocation TRANSMUTATION_TABLE =
-            ResourceLocation.fromNamespaceAndPath("alexsmobs", "transmutation_table");
 
     private ForbiddenTransmutationHandler() {}
 
     @SubscribeEvent
     public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-        if (!ModList.get().isLoaded("alexsmobs") || event.getHand() != InteractionHand.MAIN_HAND) {
+        if (event.getHand() != InteractionHand.MAIN_HAND) {
             return;
         }
 
@@ -57,7 +53,7 @@ public final class ForbiddenTransmutationHandler {
         }
 
         BlockState state = event.getLevel().getBlockState(event.getPos());
-        if (!state.is(BuiltInRegistries.BLOCK.get(TRANSMUTATION_TABLE))) {
+        if (!state.is(ModBlocks.PEDESTAL_EXPLORACAO.get())) {
             return;
         }
 

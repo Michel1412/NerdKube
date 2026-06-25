@@ -1,5 +1,5 @@
 ---
-description: Alinhamento do mod com o modpack fechado Nerds Quadrados
+description: Alinhamento do mod com o modpack fechado NerdCube
 alwaysApply: true
 ---
 
@@ -10,7 +10,7 @@ O modpack **não é versionado neste repo**. O snapshot em `docs/modpack/` espel
 ## Antes de integrar com outro mod
 
 1. Confirmar JAR em `docs/modpack/mods-list.txt` ou `manifest.json`
-2. Conferir config em `G:\CurseForge\minecraft\Instances\Nerds Quadrados\config\`
+2. Conferir config em `G:\CurseForge\minecraft\Instances\NerdCube\config\`
 3. Usar o **mod ID** correto (ex.: `endrem`, não `endremastered`)
 
 ## Versões fixas

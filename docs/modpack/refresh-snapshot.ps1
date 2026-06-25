@@ -1,8 +1,13 @@
-# Atualiza o snapshot do modpack Nerds Quadrados em docs/modpack/
+# Atualiza o snapshot do modpack NerdCube em docs/modpack/
 # Uso: .\docs\modpack\refresh-snapshot.ps1
+#      .\docs\modpack\refresh-snapshot.ps1 -InstancePath "D:\Outro\Caminho\NerdCube"
+
+param(
+    [string]$InstancePath = "G:\CurseForge\minecraft\Instances\NerdCube"
+)
 
 $ErrorActionPreference = "Stop"
-$instance = "G:\CurseForge\minecraft\Instances\Nerds Quadrados"
+$instance = $InstancePath
 $outDir = Join-Path $PSScriptRoot "."
 
 if (-not (Test-Path $instance)) {
