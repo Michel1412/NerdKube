@@ -33,7 +33,7 @@ Optional integrations: Alex's Mobs (Forbidden Transmutation Dust), Jade, JEI, Fa
 .\gradlew deployToModpack   # copy JAR to CurseForge instance (local)
 ```
 
-**CI / CurseForge release:** push tag `v*` (e.g. `v0.6.0`) with GitHub secrets `CURSEFORGE_TOKEN` and `CURSEFORGE_PROJECT_ID`.
+**CI / CurseForge release:** push tag `v*` (e.g. `v1.0.0`) — workflow `.github/workflows/deploy.yml` builds and uploads via [mc-publish](https://github.com/Kir-Antipov/mc-publish). Requires secrets `CURSEFORGE_TOKEN` and `CURSEFORGE_PROJECT_ID`. Tags without `-alpha`/`-beta` publish as **release**; add `docs/changelogs/<version>.md` for a curated changelog.
 
 ---
 

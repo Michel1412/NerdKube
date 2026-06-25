@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Valida token CurseForge e endpoints usados pelo ModPublisher no upload.
+# Valida token CurseForge e endpoints usados pelo mc-publish no upload.
 set -euo pipefail
 
 sanitize_token() {
@@ -64,7 +64,7 @@ HTTP=$(cf_get "/games/432/versions" /tmp/cf-mc-versions.json)
 echo "GET /v1/games/432/versions -> HTTP $HTTP"
 if [[ "$HTTP" != "200" ]]; then
   cat /tmp/cf-mc-versions.json || true
-  echo "::error::Falha ao listar versoes do Minecraft — ModPublisher precisa deste endpoint."
+  echo "::error::Falha ao listar versoes do Minecraft — o upload precisa deste endpoint."
   exit 1
 fi
 
@@ -80,7 +80,7 @@ HTTP=$(cf_get "/minecraft/modloader" /tmp/cf-loaders.json)
 echo "GET /v1/minecraft/modloader -> HTTP $HTTP"
 if [[ "$HTTP" != "200" ]]; then
   cat /tmp/cf-loaders.json || true
-  echo "::error::Falha ao listar mod loaders — ModPublisher precisa deste endpoint."
+  echo "::error::Falha ao listar mod loaders — o upload precisa deste endpoint."
   exit 1
 fi
 

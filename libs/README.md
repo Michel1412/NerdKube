@@ -29,7 +29,7 @@ Use `libs/` quando `modpack_mods_dir` não existir nesta máquina, ou para `comp
 
 ## CI (GitHub Actions)
 
-O workflow de release executa `scripts/ci-setup-libs.sh` antes do build. O script baixa os JARs com os nomes exatos de `gradle.properties` (Modrinth + CurseForge CDN para Just Dire Things).
+O workflow `.github/workflows/deploy.yml` executa `scripts/ci-setup-libs.sh` antes do build e publica com [mc-publish](https://github.com/Kir-Antipov/mc-publish). O script baixa os JARs com os nomes exatos de `gradle.properties` (Modrinth + CurseForge CDN para Just Dire Things).
 
 Atualize versões no script e em `gradle.properties` quando o modpack mudar.
 
