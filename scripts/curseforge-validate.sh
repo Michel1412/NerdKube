@@ -72,13 +72,24 @@ if [[ "$HTTP" != "200" ]]; then
   exit 1
 fi
 
-if ! jq -e '[.[].versions[]? | .name] | any(. == "1.21.1")' /tmp/cf-upload-versions.json >/dev/null; then
+# Upload API retorna array plano: [{ id, gameVersionTypeID, name, slug }, ...]
+if ! jq -e '
+  [.[] | .name | sub("-Snapshot$"; "")]
+  | any(. == "1.21.1")
+' /tmp/cf-upload-versions.json >/dev/null; then
   echo "::error::Versao Minecraft 1.21.1 nao encontrada na Upload API."
+  echo "Amostra de versoes 1.21.x na resposta:"
+  jq -r '
+    [.[] | .name | sub("-Snapshot$"; "")]
+    | map(select(test("^1\\.21")))
+    | unique
+    | .[0:12][]
+  ' /tmp/cf-upload-versions.json 2>/dev/null || true
   exit 1
 fi
 echo "Versao Minecraft 1.21.1: OK na Upload API"
 
-if jq -e '[.[] | select((.slug // "") | test("modloader|loader"; "i")) | .versions[]? | .name] | any(. | ascii_downcase == "neoforge")' /tmp/cf-upload-versions.json >/dev/null; then
+if jq -e '[.[] | .name | ascii_downcase] | any(. == "neoforge")' /tmp/cf-upload-versions.json >/dev/null; then
   echo "Mod loader NeoForge: OK na Upload API"
 else
   echo "::warning::NeoForge nao encontrado em /api/game/versions; confira o projeto na CurseForge."

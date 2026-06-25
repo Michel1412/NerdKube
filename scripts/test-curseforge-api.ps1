@@ -54,13 +54,14 @@ foreach ($path in @("game/version-types?cache=true", "game/versions?cache=true")
 
 $versions = Test-UploadApi "game/versions?cache=true"
 $has1211 = $false
-foreach ($group in $versions.Json) {
-    foreach ($v in $group.versions) {
-        if ($v.name -eq "1.21.1") { $has1211 = $true }
-    }
+foreach ($entry in $versions.Json) {
+    $name = ($entry.name -replace '-Snapshot$', '')
+    if ($name -eq '1.21.1') { $has1211 = $true }
 }
 if (-not $has1211) {
     Write-Host "ERRO: versao 1.21.1 nao encontrada na Upload API." -ForegroundColor Red
+    $sample = $versions.Json | ForEach-Object { ($_.name -replace '-Snapshot$', '') } | Where-Object { $_ -match '^1\.21' } | Select-Object -Unique -First 12
+    if ($sample) { Write-Host ("Amostra 1.21.x: " + ($sample -join ', ')) }
     exit 1
 }
 Write-Host "Versao Minecraft 1.21.1: OK" -ForegroundColor Green
