@@ -35,6 +35,8 @@ Optional integrations: Alex's Mobs (Forbidden Transmutation Dust), Jade, JEI, Fa
 
 **CI / CurseForge release:** push tag `v*` (e.g. `v1.0.0`) — workflow `.github/workflows/deploy.yml` builds and uploads via [mc-publish](https://github.com/Kir-Antipov/mc-publish). Requires secrets `CURSEFORGE_PROJECT_ID` and **`CURSEFORGE_TOKEN` from [authors API tokens](https://authors.curseforge.com/#/api-tokens)** (Upload API, `X-Api-Token` — not the Studios console key). Tags without `-alpha`/`-beta` publish as **release**; add `docs/changelogs/<version>.md` for a curated changelog.
 
+**Importante:** o GitHub Actions usa o workflow **do commit da tag**. Depois de corrigir o CI, mova a tag para `main` atual (`git tag -f v1.0.0` + `git push origin v1.0.0 --force`) ou rode **workflow_dispatch** na branch `main`.
+
 ---
 
 ## TEXTUAL EVOLUTION FLOWCHART

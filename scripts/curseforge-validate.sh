@@ -84,18 +84,6 @@ else
   echo "::warning::NeoForge nao encontrado em /api/game/versions; confira o projeto na CurseForge."
 fi
 
-# Metadados do projeto (API v1) — opcional, so diagnostico
-HTTP=$(curl -sS -o /tmp/cf-mod.json -w "%{http_code}" \
-  -H "x-api-key: $TOKEN" \
-  -H "Accept: application/json" \
-  "https://api.curseforge.com/v1/mods/$PROJECT_ID")
-echo "GET /v1/mods/$PROJECT_ID (Studios API) -> HTTP $HTTP"
-if [[ "$HTTP" == "200" ]]; then
-  jq -r '"Projeto: \(.data.name) (\(.data.slug)) id=\(.data.id)"' /tmp/cf-mod.json
-else
-  echo "::notice::Token de autor nao autentica na API v1 (esperado). Upload usa apenas X-Api-Token."
-fi
-
 write_github_env "CURSEFORGE_TOKEN" "$TOKEN"
 write_github_env "CURSEFORGE_PROJECT_ID" "$PROJECT_ID"
 
