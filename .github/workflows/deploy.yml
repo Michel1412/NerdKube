@@ -81,9 +81,12 @@ jobs:
 
       - name: Upload to CurseForge
         uses: Kir-Antipov/mc-publish@v3.3
+        env:
+          CURSEFORGE_TOKEN: ${{ env.CURSEFORGE_TOKEN }}
+          CURSEFORGE_PROJECT_ID: ${{ env.CURSEFORGE_PROJECT_ID }}
         with:
-          curseforge-id: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+          curseforge-id: ${{ env.CURSEFORGE_PROJECT_ID }}
+          curseforge-token: ${{ env.CURSEFORGE_TOKEN }}
           files: build/libs/!(*-@(dev|sources|javadoc)).jar
           version: ${{ steps.meta.outputs.mod_version }}
           version-type: ${{ steps.meta.outputs.version_type }}
@@ -96,5 +99,6 @@ jobs:
             1.21.1
           changelog-file: ${{ steps.changelog.outputs.file }}
           changelog: ${{ steps.changelog.outputs.inline }}
+          changelog-type: markdown
           github-generate-changelog: ${{ steps.changelog.outputs.generate == 'true' }}
           github-tag: ${{ github.event_name == 'push' && github.ref_name || '' }}

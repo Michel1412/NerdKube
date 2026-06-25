@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Valida token CurseForge e endpoints usados pelo mc-publish no upload.
+# Valida token CurseForge para mc-publish (Upload API + metadados).
 set -euo pipefail
 
 sanitize_token() {
@@ -34,63 +34,69 @@ fi
 echo "CurseForge project ID: $PROJECT_ID"
 echo "Token length: ${#TOKEN} chars"
 
-cf_get() {
+if [[ "$TOKEN" == \$2a\$10\$* ]]; then
+  echo "::error::CURSEFORGE_TOKEN parece ser chave do CurseForge for Studios (console.curseforge.com, header x-api-key)."
+  echo "::error::O mc-publish envia arquivos pela Upload API de autores (header X-Api-Token)."
+  echo "::error::Gere um token em https://authors.curseforge.com/#/api-tokens e atualize o secret CURSEFORGE_TOKEN."
+  exit 1
+fi
+
+upload_get() {
   local path="$1"
   local out="$2"
   local http
   http=$(curl -sS -o "$out" -w "%{http_code}" \
-    -H "x-api-key: $TOKEN" \
+    -H "X-Api-Token: $TOKEN" \
     -H "Accept: application/json" \
-    "https://api.curseforge.com/v1${path}")
+    "https://minecraft.curseforge.com/api${path}")
   echo "$http"
 }
 
-HTTP=$(cf_get "/games" /tmp/cf-games.json)
-echo "GET /v1/games -> HTTP $HTTP"
+HTTP=$(upload_get "/game/version-types?cache=true" /tmp/cf-upload-types.json)
+echo "GET /api/game/version-types (Upload API) -> HTTP $HTTP"
 if [[ "$HTTP" != "200" ]]; then
-  cat /tmp/cf-games.json || true
+  cat /tmp/cf-upload-types.json || true
+  if jq -e '.errorCode == 3' /tmp/cf-upload-types.json >/dev/null 2>&1; then
+    echo "::error::Token invalido para upload (X-Api-Token). Use https://authors.curseforge.com/#/api-tokens — nao o console Studios."
+  else
+    echo "::error::Falha na autenticacao da Upload API (mesmo endpoint usado pelo mc-publish)."
+  fi
   exit 1
 fi
 
-HTTP=$(cf_get "/mods/$PROJECT_ID" /tmp/cf-mod.json)
-echo "GET /v1/mods/$PROJECT_ID -> HTTP $HTTP"
+HTTP=$(upload_get "/game/versions?cache=true" /tmp/cf-upload-versions.json)
+echo "GET /api/game/versions (Upload API) -> HTTP $HTTP"
 if [[ "$HTTP" != "200" ]]; then
-  cat /tmp/cf-mod.json || true
-  exit 1
-fi
-jq -r '"Projeto: \(.data.name) (\(.data.slug)) id=\(.data.id)"' /tmp/cf-mod.json
-
-HTTP=$(cf_get "/games/432/versions" /tmp/cf-mc-versions.json)
-echo "GET /v1/games/432/versions -> HTTP $HTTP"
-if [[ "$HTTP" != "200" ]]; then
-  cat /tmp/cf-mc-versions.json || true
-  echo "::error::Falha ao listar versoes do Minecraft — o upload precisa deste endpoint."
+  cat /tmp/cf-upload-versions.json || true
+  echo "::error::Falha ao listar versoes na Upload API."
   exit 1
 fi
 
-# v1 retorna { data: [ { type, versions: ["1.21.1", ...] } ] } — strings, nao objetos
-if ! jq -e 'any(.data[]?.versions[]?; . == "1.21.1")' /tmp/cf-mc-versions.json >/dev/null; then
-  echo "::error::Versao 1.21.1 nao encontrada em GET /v1/games/432/versions."
-  jq -r '.data[]? | "type=\(.type) sample=\(.versions[0] // "n/a")"' /tmp/cf-mc-versions.json | head -5 || true
+if ! jq -e '[.[].versions[]? | .name] | any(. == "1.21.1")' /tmp/cf-upload-versions.json >/dev/null; then
+  echo "::error::Versao Minecraft 1.21.1 nao encontrada na Upload API."
   exit 1
 fi
-echo "Versao Minecraft 1.21.1: OK na API"
+echo "Versao Minecraft 1.21.1: OK na Upload API"
 
-HTTP=$(cf_get "/minecraft/modloader" /tmp/cf-loaders.json)
-echo "GET /v1/minecraft/modloader -> HTTP $HTTP"
-if [[ "$HTTP" != "200" ]]; then
-  cat /tmp/cf-loaders.json || true
-  echo "::error::Falha ao listar mod loaders — o upload precisa deste endpoint."
-  exit 1
-fi
-
-if jq -e 'any(.data[]?; ((.name // "") | ascii_downcase) == "neoforge")' /tmp/cf-loaders.json >/dev/null; then
-  echo "Mod loader NeoForge: OK na API"
+if jq -e '[.[] | select((.slug // "") | test("modloader|loader"; "i")) | .versions[]? | .name] | any(. | ascii_downcase == "neoforge")' /tmp/cf-upload-versions.json >/dev/null; then
+  echo "Mod loader NeoForge: OK na Upload API"
 else
-  echo "::warning::NeoForge nao encontrado em /v1/minecraft/modloader; confira o projeto na CurseForge."
+  echo "::warning::NeoForge nao encontrado em /api/game/versions; confira o projeto na CurseForge."
+fi
+
+# Metadados do projeto (API v1) — opcional, so diagnostico
+HTTP=$(curl -sS -o /tmp/cf-mod.json -w "%{http_code}" \
+  -H "x-api-key: $TOKEN" \
+  -H "Accept: application/json" \
+  "https://api.curseforge.com/v1/mods/$PROJECT_ID")
+echo "GET /v1/mods/$PROJECT_ID (Studios API) -> HTTP $HTTP"
+if [[ "$HTTP" == "200" ]]; then
+  jq -r '"Projeto: \(.data.name) (\(.data.slug)) id=\(.data.id)"' /tmp/cf-mod.json
+else
+  echo "::notice::Token de autor nao autentica na API v1 (esperado). Upload usa apenas X-Api-Token."
 fi
 
 write_github_env "CURSEFORGE_TOKEN" "$TOKEN"
 write_github_env "CURSEFORGE_PROJECT_ID" "$PROJECT_ID"
 
-echo "OK: autenticacao e endpoints de upload validados."
+echo "OK: token de upload e endpoints do mc-publish validados."

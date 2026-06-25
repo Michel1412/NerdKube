@@ -33,6 +33,8 @@ O workflow `.github/workflows/deploy.yml` executa `scripts/ci-setup-libs.sh` ant
 
 Atualize versões no script e em `gradle.properties` quando o modpack mudar.
 
+**Token CurseForge:** o CI usa a [Upload API de autores](https://support.curseforge.com/support/solutions/articles/9000197321-curseforge-upload-api) (`X-Api-Token`). Gere em [authors.curseforge.com → API Tokens](https://authors.curseforge.com/#/api-tokens). A chave do [Studios console](https://console.curseforge.com/) (`$2a$10$…`, `x-api-key`) não serve para o `mc-publish`.
+
 ## Deploy no CurseForge (instância local)
 
 ```powershell
